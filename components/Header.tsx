@@ -1,7 +1,7 @@
 "use client";
 import Image from 'next/image';
 import React, { useState } from 'react';
-
+import logoUrl from '/public/Capture-removebg-preview 1.png'
 import { megaMenu, Nav_links } from '@/constants';
 import Link from 'next/link';
 
@@ -16,12 +16,11 @@ const Header = () => {
     // const toggleHover = () => {
     //     setHover(prev => !prev);
     // };
-
     return (
         <div className='bg-white  lg:fixed  cursor-default top-0  fixed lg:z-[1111111111] z-[1111111] min-h-[80px] lg:min-h-[90px] py-[1rem] md:px-[2.5rem] px-[1rem] flex lg:flex-row flex-col lg:gap-0 gap-10 items-start lg:items-center md:justify-between  w-full'>
             <div>
                 <Link  href="/">
-                <Image className='w-auto h-[45px] lg:h-[55px]' src="/public/Capture-removebg-preview 1.png" height={75} alt='Node Logo' />
+                <Image className='w-auto h-[45px] lg:h-[55px]' src={logoUrl} width={180}  height={75} alt='Node Logo' />
                 </Link>
             </div>
             <div className={menu ? `flex lg:flex-row flex-col gap-6 lg:gap-[2rem] items-start lg:items-center h-full justify-center` : `hidden lg:flex lg:flex-row flex-col gap-6 lg:gap-[2rem] items-start lg:items-center h-full justify-center`}>

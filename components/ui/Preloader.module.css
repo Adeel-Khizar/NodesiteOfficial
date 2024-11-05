@@ -1,0 +1,45 @@
+@keyframes fadeOut {
+    0% {
+        opacity: 1; /* Fully visible */
+    }
+    80% {
+        opacity: 1; /* Fully visible */
+    }
+    100% {
+        opacity: 0; /* Fade to invisible */
+        visibility: hidden; /* Prevent interaction */
+        display: none; /* Effectively remove from layout */
+    }
+}
+
+@keyframes stroke {
+    to {
+        stroke-dashoffset: 0; /* Animate to fully visible */
+    }
+}
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    background-color: black; /* Full-screen black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999999999999; /* Ensure it is on top */
+    animation: fadeOut 3s ease forwards; /* 2s for stroke and 2s for fade out */
+}
+
+.svg {
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+    fill: none; /* Ensure the SVG has no fill */
+    stroke: white; /* White stroke color */
+    stroke-width: 3; /* Adjust stroke width as needed */
+    animation: stroke 3s linear forwards; /* Stroke animation */
+    stroke-dasharray: 1000; /* Ensures the stroke animates to full */
+    stroke-dashoffset: 1000; /* Start fully offset */
+}

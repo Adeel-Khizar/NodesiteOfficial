@@ -6,6 +6,7 @@ import "./globals.css";
 import Preloader from "@/components/ui/Preloader";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Comingsoon from "@/components/Comingsoon";
 
 
 
@@ -24,10 +25,11 @@ export default function RootLayout({
     <html lang="en">
       
         <body className={``}>
-        <Preloader />
+        {/* <Preloader />
         <Header/>
           {children}
-<Footer/>
+<Footer/> */}
+<Comingsoon/>
         </body>
  
     </html>

@@ -7,7 +7,7 @@ export default function Comingsoon(): JSX.Element {
   return (
     <div
       id="large-header"
-      className="large-header flex flex-col items-center justify-center min-h-screen pt-24 pb-24 sm:px-8 px-4 md:px-16 mx-auto text-white"
+      className="large-header bg-white flex flex-col items-center justify-center min-h-screen pt-24 pb-24 sm:px-8 px-4 md:px-16 mx-auto text-white"
     >
       <Image
         src={logoUrl}

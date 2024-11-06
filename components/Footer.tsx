@@ -5,17 +5,17 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div className='px-[5vw] pt-[60px]'>
+    <div className='px-[5vw] bg-white pt-[60px]'>
         <div className='flex lg:flex-row flex-col items-center pb-5'>
         <div className='lg:w-[40%] w-full '>
             <h5 className={` text-md text-gray-500 pb-8 ${Rancher} `}>Work</h5>
-            <h3 className={` lg:text-[4.5vw]  text-5xl pb-20 ${SedaN} `}>Project & Case Studies</h3>
-            <p className={`text-lg   ${SedaN} `}>Web Design, Development and Custom Development</p>
+            <h3 className={` lg:text-[4.5vw]  text-black text-5xl pb-20 ${SedaN} `}>Project & Case Studies</h3>
+            <p className={`text-lg text-black   ${SedaN} `}>Web Design, Development and Custom Development</p>
         </div>
         <div className='lg:w-[60%] w-full'>
-            <h5 className={` text-md  text-gray-500 pb-8 ${Rancher} `}>Work</h5>
-            <h3 className={`lg:text-[4.5vw] text-5xl pb-20 ${SedaN} `}>More words - less code Say hi!</h3>
-            {/* <Link className={` text-lg  underline ${SedaN} `} href="/contact">Schedule a call - 2 clicks away</Link> */}
+            <h5 className={` text-md  text-gray-500 pb-8 ${Rancher} `}>Get In Touch</h5>
+            <h3 className={`lg:text-[4.5vw] text-black text-5xl pb-20 ${SedaN} `}>More words - less code Say hi!</h3>
+            <Link className={` text-lg  underline ${SedaN} `} href="/contact">Contact Us</Link>
         </div>
         </div>
         

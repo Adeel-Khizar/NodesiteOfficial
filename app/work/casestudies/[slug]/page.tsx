@@ -31,10 +31,10 @@ export default function Page({ params }: { params: { slug: string } }) {
                         <div className="flex px-[5vw] py-12 gap-8 flex-col">
                             <div className="md:flex flex-col md:flex-row">
                                 <div className="md:w-[40%] md:mb-0 my-8 w-full">
-                                    <h3 className={`text-3xl max-w-[300px] ${SedaN}`}>{item.subtitle1}</h3>
+                                    <h3 className={`text-3xl max-w-[300px] text-black ${SedaN}`}>{item.subtitle1}</h3>
                                 </div>
                                 <div className="md:w-[60%] w-full">
-                                    <h2 className={` ${Rancher} text-5xl pb-6`}>Project Brief</h2>
+                                    <h2 className={` ${Rancher} text-5xl text-black pb-6`}>Project Brief</h2>
                                     <p className={`text-lg ${SedaN}`}>
                                         {item.description1}
                                     </p>
@@ -42,12 +42,12 @@ export default function Page({ params }: { params: { slug: string } }) {
                             </div>
                             <div className="md:flex flex-col md:flex-row">
                                 <div className="md:w-[40%] w-full">
-                                    <h3 className={`text-3xl max-w-[300px] ${SedaN}`}>
+                                    <h3 className={`text-3xl max-w-[300px] text-black ${SedaN}`}>
                                         {item.subtitle2}
                                     </h3>
                                 </div>
                                 <div className="md:w-[60%] mb:mt-0 mt-8 w-full">
-                                    <p className={`text-lg ${SedaN}`}>
+                                    <p className={`text-lg text-black ${SedaN}`}>
                                         {item.description2}
                                     </p>
                                 </div>
@@ -71,13 +71,13 @@ export default function Page({ params }: { params: { slug: string } }) {
                         </div>
                         <div className="bg-transparent h-auto flex md:flex-row flex-col px-4 py-16 sm:p-[6vw]">
                             <div className="h-full flex items-start md:mb-0 mb-10 justify-start md:w-[50%] w-full">
-                                <h1 className={` ${Rancher} text-5xl md:text-[5vw]`}>Results</h1>
+                                <h1 className={` ${Rancher} text-5xl text-black md:text-[5vw]`}>Results</h1>
                             </div>
                             <div className="md:w-[50%] w-full h-full flex gap-8 md:gap-20 flex-col">
-                                <p className={`${SedaN} w-full text-md md:text-2xl`}>
+                                <p className={`${SedaN} w-full text-md text-black md:text-2xl`}>
                                     {item.resultDes}
                                 </p>
-                                <Link href={item.link} className={`px-12 py-2 border-2 border-gray-900 rounded-full max-w-fit ${Rancher}`}>View Project</Link>
+                                <Link href={item.link} className={`px-12 py-2 border-2 text-black bg-white border-gray-900 rounded-full max-w-fit ${Rancher}`}>View Project</Link>
                             </div>
                         </div>
                         {/* <div className="w-full">

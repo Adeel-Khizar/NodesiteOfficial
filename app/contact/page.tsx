@@ -51,7 +51,7 @@ export default function Contact() {
       </div>
       <div className='p-[5%] md:px-[5vw] md:mt-0 mt-[0px] relative w-[100%] md:w-[80%] overflow-hidden m-auto'>
         <form onSubmit={handleSubmit} className='bg-transparent w-full z-20 relative rounded-3xl gap-8 contact_form flex flex-col p-[5%] md:p-[3vw] border-2 border-gray-300'>
-          <h2 className={`${Rancher} text-4xl lg:text-[4vw] text-center w-full md:mb-8`}>Get In Touch</h2>
+          <h2 className={`${Rancher} text-4xl lg:text-[4vw]  text-black text-center w-full md:mb-8`}>Get In Touch</h2>
 
           <div className='flex gap-8 flex-col w-full'>
             <div className='flex gap-4 w-full items-center justify-start'>

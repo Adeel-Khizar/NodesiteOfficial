@@ -118,7 +118,7 @@ export const porfolioCards = [
   {
     id: 10,
     projectImage:'/screen-capture (21).webm',
-    projectTitle: 'Last Strategic Marketing',
+    projectTitle: 'La Strategic Marketing',
     projectSubtitle: 'Wordpress Development',
     projectLink: 'https://www.lastrategicmarketing.com/',
   },
@@ -415,7 +415,7 @@ export const TeamInfo = [
     id: 18,
     profileImage: '/team6.png',
     profileName: 'Ahmed Malik',
-    profileProfession: 'Frontend/Shopify Internee',
+    profileProfession: 'Front End/Shopify Internee',
     backgroundColor: '#282E3D',
     tag: [
       { id: 1, tags: 'Internees' }
@@ -425,7 +425,7 @@ export const TeamInfo = [
     id: 19,
     profileImage: '/team6.png',
     profileName: 'Abdul Rafay',
-    profileProfession: 'Frontend/Shopify Developer',
+    profileProfession: 'Front End/Shopify Developer',
     backgroundColor: '#AC2658',
     tag: [
       { id: 1, tags: 'Shopify Developers' }
@@ -589,7 +589,7 @@ export const previousWork = [
   },
   {
     id: 7,
-    Imgurl: "/stormdamage.com_.png",
+    Imgurl: "/www.naturefootage.com_.png",
     title: 'Nature Footage',
     description: "Wordpress Development",
     url: '/',
@@ -622,7 +622,7 @@ export const previousWork = [
   },
   {
     id: 11,
-    Imgurl: "/www.cybersaint.io_.png",
+    Imgurl: "/conexiom.com_.png",
     title: 'Conexiom',
     description: "HubSpot Development",
     url: '/',

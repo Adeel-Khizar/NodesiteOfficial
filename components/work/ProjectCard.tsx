@@ -7,8 +7,8 @@ import { SedaN } from "@/fonts";
 export function PorjectCards() {
 
   return (
-    <div className="h-auto  shadow-lg  shadow-black  bg-white relative  flex items-center justify-center">
-      <div className="PreviousWork p-[5vw]">
+    <div className="h-auto   shadow-lg  shadow-black  bg-white relative  flex items-center justify-center">
+      <div className="PreviousWork  p-[5vw]">
       {
         previousWork.map((item) => (
           <div className="workCard">
@@ -18,8 +18,8 @@ export function PorjectCards() {
            style={{
             fontWeight: 900
           }}
-          className={`${SedaN}  font-extrabold text-4xl `}>{item.title}</h2>
-          <p className={`${SedaN} font-normal text-xl`}>{item.description}</p>
+          className={`${SedaN}  font-extrabold text-black text-4xl `}>{item.title}</h2>
+          <p className={`${SedaN} font-normal text-black text-xl`}>{item.description}</p>
         </DirectionAwareHover>
       </Link>
           </div>

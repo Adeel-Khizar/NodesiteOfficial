@@ -15,15 +15,15 @@ const Footer = () => {
         <div className='lg:w-[60%] w-full'>
             <h5 className={` text-md  text-gray-500 pb-8 ${Rancher} `}>Work</h5>
             <h3 className={`lg:text-[4.5vw] text-5xl pb-20 ${SedaN} `}>More words - less code Say hi!</h3>
-            <Link className={` text-lg  underline ${SedaN} `} href="/">Schedule a call - 2 clicks away</Link>
+            <Link className={` text-lg  underline ${SedaN} `} href="/contact">Schedule a call - 2 clicks away</Link>
         </div>
         </div>
         
-        <div className='w-full flex md:flex-row flex-col md:gap-0 gap-4   items-center justify-center text-center md:justify-between border-t-2 border-gray-900 py-4'>
+        <div className='w-full flex md:flex-row flex-col md:gap-0 gap-4   items-center justify-center text-center md:justify-center border-t-2 border-gray-900 py-4'>
             <p className={` text-sm text-500 ${SedaN} `} >Copyright 2024 All Right Reserved</p>
             <div className='flex items-center ' >
-                <Link href='/' className={` px-2  border-r-2 border-black  ${SedaN} `}>Terms of Services </Link>
-                <Link href='/' className={` px-2  ${SedaN} `} >Terms of Services </Link>
+                {/* <Link href='/' className={` px-2  border-r-2 border-black  ${SedaN} `}>Terms of Services </Link>
+                <Link href='/' className={` px-2  ${SedaN} `} >Terms of Services </Link> */}
 
             </div>
         </div>

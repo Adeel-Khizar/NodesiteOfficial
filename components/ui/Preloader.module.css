@@ -34,11 +34,11 @@
 }
 
 .svg {
-    width: 150px; /* Adjust size as needed */
+    width: 180px; /* Adjust size as needed */
     height: auto;
     fill: none; /* Ensure the SVG has no fill */
     stroke: white; /* White stroke color */
-    stroke-width: 3; /* Adjust stroke width as needed */
+    stroke-width: 4; /* Adjust stroke width as needed */
     animation: stroke 3s linear forwards; /* Stroke animation */
     stroke-dasharray: 1000; /* Ensures the stroke animates to full */
     stroke-dashoffset: 1000; /* Start fully offset */

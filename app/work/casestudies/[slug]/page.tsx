@@ -8,7 +8,7 @@ export default function Page({ params }: { params: { slug: string } }) {
     const { slug } = params; // Destructure slug from params
 
     return (
-        <div className="mt-[100px] py-[50px] bg-[#FCF6F2]">
+        <div className="mt-[100px] pt-[50px] bg-[#FCF6F2]">
            
             {caseStudiesData.map((item, index) => (
                 item.slug === slug ? ( // Use === for comparison
@@ -54,7 +54,7 @@ export default function Page({ params }: { params: { slug: string } }) {
                             </div>
                         </div>
                         <div className="flex items-center justify-center w-full">
-                            <div className="w-full gap-x-4 sm:gap-x-8 lg:gap-x-12 gap-y-12 sm:gap-y-16 lg:gap-y-40 sm:h-[120] h-auto sm:grid-cols-2 workcaseGrid px-[8vw] py-[40px] sm:py-[60px] bg-black">
+                            <div className="w-full gap-x-4 sm:gap-x-8 lg:gap-x-12 gap-y-12 sm:gap-y-16 lg:gap-y-24 sm:h-[120] h-auto sm:grid-cols-2 workcaseGrid px-[8vw] py-[40px] sm:py-[80px] bg-black">
                                 <div>
                                     <Image className="h-full w-full" src={item.image1} height={1000} width={1000} alt="image" />
                                 </div>
@@ -80,14 +80,14 @@ export default function Page({ params }: { params: { slug: string } }) {
                                 <Link href={item.link} className={`px-12 py-2 border-2 border-gray-900 rounded-full max-w-fit ${Rancher}`}>View Project</Link>
                             </div>
                         </div>
-                        <div className="w-full">
+                        {/* <div className="w-full">
                             <div className="px-[7vw] py-[10vw]">
                                 <Image className="h-auto w-full" src={item.image5} alt="image" height={1500} width={2500} />
                             </div>
                             <div>
                                 <Image className="h-auto w-full" src={item.image6} alt="image" height={1500} width={2500} />
                             </div>
-                        </div>
+                        </div> */}
                         <div className="w-full">
                             <MoreCaseStudies />
                         </div>

@@ -75,15 +75,15 @@ export const DirectionAwareHover = ({
     >
       <AnimatePresence mode="wait">
         <motion.div
-          className="relative h-full w-full"
+          className="relative rounded-lg h-full w-full"
           initial="initial"
           whileHover={direction}
           exit="exit"
         >
-          <motion.div className="group-hover/card:block hidden workHoverOverlay absolute inset-0 w-full h-full z-10 transition duration-500" />
+          <motion.div className="group-hover/card:block rounded-lg hidden workHoverOverlay absolute inset-0 w-full h-full z-10 transition duration-500" />
           <motion.div
             variants={variants}
-            className="h-full w-full relative bg-gray-50 dark:bg-black"
+            className="h-full w-full rounded-lg relative bg-gray-50 dark:bg-black"
             transition={{
               duration: 0.2,
               ease: "easeOut",
@@ -91,11 +91,11 @@ export const DirectionAwareHover = ({
           >
             <h1 style={{
               fontWeight: 900
-            }} className={` ${SedaN} font-extrabold absolute top-0 border-2 border-black z-40 text-3xl bg-white p-3 text-black left-0`}>{title}</h1>
+            }} className={` ${SedaN} font-extrabold absolute top-0 border-2 rounded-lg border-black z-40 text-3xl bg-white p-3 text-black left-0`}>{title}</h1>
             <Image
               alt="image"
               className={cn(
-                "h-full w-full object-cover scale-[1.15]",
+                "h-full w-full object-cover rounded-lg scale-[1.15]",
                 imageClassName
               )}
               width="1000"

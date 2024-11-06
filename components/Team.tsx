@@ -1,6 +1,6 @@
 // Testimonials.tsx
 import { useCursor } from '../hooks/CursorContext'; // Adjust the path as necessary
-import React, { useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Mousewheel, Scrollbar } from 'swiper/modules';
 import Image from 'next/image';
@@ -10,13 +10,13 @@ import { TeamInfo } from '@/constants';
 import 'swiper/css/scrollbar';
 
 const tabsData = [
-  { id: 1, title: "Head of Sales" },
-  { id: 2, title: "Management" },
-  { id: 3, title: "Sales Coordinator" },
-  { id: 4, title: "Shopify Developer" },
-  { id: 5, title: "Wordpress Developer" },
-  { id: 6, title: "Hubspot Developer" },
-  { id: 7, title: "Internee" }
+  { id: 1, title: "Management" },
+  { id: 2, title: "Head of Sales" },
+  { id: 3, title: "Sales Coordinators" },
+  { id: 4, title: "Shopify Developers" },
+  { id: 5, title: "Wordpress Developers" },
+  { id: 6, title: "Hubspot Developers" },
+  { id: 7, title: "Internees" }
 ];
 
 const Team: React.FC = () => {
@@ -85,6 +85,7 @@ const Team: React.FC = () => {
                 <div className='flex h-full transform rotate-1 flex-col items-start gap-6 justify-between'>
                   <div className='relative'>
                     <div style={{ background: `${item.backgroundColor}` }} className={`absolute h-[70%] rounded-2xl -z-10 w-full bottom-0 left-0`}></div>
+                    <Suspense fallback={<p>Loading video...</p>}>
                     <Image
                       style={{ objectFit: "cover" }}
                       src={item.profileImage}
@@ -94,6 +95,7 @@ const Team: React.FC = () => {
                       loading="lazy" // Explicitly setting lazy loading
                       sizes="(max-width: 768px) 100vw, 50vw" // Adjust sizes for responsiveness
                     />
+                    </Suspense>
                   </div>
                   <div className='flex flex-col text-black text-start'>
                     <h3 className={` ${Rancher} text-md lg:text-xl font-bold`}>{item.profileName}</h3>

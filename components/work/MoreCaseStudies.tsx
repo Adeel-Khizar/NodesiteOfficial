@@ -12,10 +12,10 @@ import { Rancher, SedaN } from "@/fonts";
 export function MoreCaseStudies() {
 
   return (
-    <div className="md:h-[80vh] bg-black p-[5vw] h-auto relative flex-col  flex items-center justify-center">
-       <div className="pb-6 flex justify-between items-center md:flex-row flex-col gap-2 w-full">
+    <div className="md:h-[80vh] bg-white p-[5vw] h-auto relative flex-col  flex items-center justify-center">
+       <div className="pb-10 flex justify-between items-end md:flex-row flex-col  gap-2 w-full">
        <h1 className={`text-4xl text-black md:text-6xl ${Rancher} `} >More Case Studies</h1>
-  <Link href="/work" className={`${SedaN} text-lg  text-black underline md:text-2xl`} >SEE ALL PROJECTS </Link>
+  <Link href="/work" className={`${SedaN} text-lg  text-black underline md:text-2xl`} >See all projects </Link>
        </div>
       <div className=" grid md:gap-16 gap-4  h-full moreCaseStudies">
       {
@@ -24,9 +24,9 @@ export function MoreCaseStudies() {
       <Link href={item.slug}>
         <DirectionAwareHover title={item.title} imageUrl={item.Imgurl}>
           <h2 style={{
-            fontFamily: '900'
-          }} className={`${SedaN} font-bold text-4xl `}>{item.title}</h2>
-          <p className={`${SedaN} font-normal text-xl`}>{item.description}</p>
+            fontWeight: '900'
+          }} className={`${SedaN}  text-black  text-4xl `}>{item.title}</h2>
+          <p className={`${SedaN} font-normal text-black text-xl`}>{item.description}</p>
         </DirectionAwareHover>
       </Link>
     </div>

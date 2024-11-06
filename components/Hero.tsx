@@ -27,10 +27,10 @@ const Hero = () => {
  
     <div  className='md:h-[100vh] hero w-full relative bg-transparent lg:flex-row flex-col flex '>
       
-     <video autoPlay muted={true} loop={true} className="background-video absolute h-full w-full left-0 right-0 top-0 z-[-1] object-cover">
-        <source src="./vecteezy_3d-animation-white-geometric-background-with-cubes_46549148.mp4" type="video/mp4" /> 
+     <video autoPlay playsInline preload='false' muted={true} loop={true} className="background-video absolute h-full w-full left-0 right-0 top-0 z-[-1] object-cover">
+        <source src="./vecteezy_3d-animation-white-geometric-background-with-cubes_46549148 (1) (2).mp4" type="video/mp4" /> 
     </video>
-        <div className='flex flex-col mt-[90px] font-light   gap-6 lg:gap-10 pt-[10vw] pl-[6vw]  lg:pl-[5vw] lg:pt-[5vw] w-full lg:max-w-[60%] '>
+        <div className='flex flex-col mt-[90px] md:mt-[160px] font-light   gap-6 lg:gap-10 pt-[10vw] pl-[6vw]  lg:pl-[5vw] lg:pt-[5vw] w-full lg:max-w-[60%] '>
           <div  
             // ref={ref}
           style={{ position: "relative", overflow: "hidden" }} >

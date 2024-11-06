@@ -25,11 +25,11 @@ export default function RootLayout({
     <html lang="en">
       
         <body className={``}>
-        {/* <Preloader />
+        <Preloader />
         <Header/>
           {children}
-<Footer/> */}
-<Comingsoon/>
+<Footer/>
+{/* <Comingsoon/> */}
         </body>
  
     </html>

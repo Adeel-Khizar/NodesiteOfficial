@@ -391,9 +391,9 @@ grid-row-gap: 25px;
 .PreviousWork div:nth-child(6) { grid-area: 5 / 4 / 8 / 6; } */
 
 .workHoverOverlay {
-  background: rgba(15, 12, 41, 0.7);  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, rgba(36, 36, 62, 0.7), rgba(48, 43, 99, 0.7), rgba(15, 12, 41, 0.7)); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, rgba(36, 36, 62, 0.7), rgba(48, 43, 99, 0.7), rgba(15, 12, 41, 0.7)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: rgba(248, 248, 248, 0.7);  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, rgba(228, 228, 231, 0.7), rgba(232, 232, 235, 0.7), rgba(238, 238, 244, 0.7)); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, rgba(222, 222, 226, 0.7), rgba(233, 233, 237, 0.7), rgba(234, 234, 237, 0.7)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 /* components/Preloader.module.css */
 .testimonialsSwiperr .swiper-scrollbar {

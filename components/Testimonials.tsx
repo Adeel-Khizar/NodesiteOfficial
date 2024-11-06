@@ -43,12 +43,13 @@ const Testimonials = () => {
             <div className='flex gap-20 flex-col'>
               <h2 className={` ${SedaN} text-white text-md text-center lg:text-xl tracking-wide		 `}>"{reviews.Review}"</h2>
               <div className='flex items-center justify-start gap-4'>
-                <div className='lg:h-[90px] lg:w-[90px] h-[50px] w-[50px] rounded-full overflow-hidden'>
-                  <Image height={500} width={500} src={reviews.profileImage} alt={reviews.profileName} />
-                </div>
-                <div className='flex flex-col text-white gap-2'>
-                  <h2 className= {` ${Rancher} text-start `}>{reviews.profileName}</h2>
-                  <h2 className={` ${SedaN} text-start text-gray-400 `}>{reviews.profileProfession}</h2>
+             
+                <div className='flex flex-col m-auto  text-white gap-2'>
+                  <h2 style={{
+                    fontWeight: '900',
+                    letterSpacing: '0.1rem'
+                  }} className= {` ${SedaN} text-center text-2xl `}>{reviews.profileName}</h2>
+                  <h2 className={` ${SedaN} text-center text-md text-gray-400 `}>{reviews.profileProfession}</h2>
                 </div>
               </div>
             </div>

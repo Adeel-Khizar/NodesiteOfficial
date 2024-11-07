@@ -12,7 +12,9 @@ import { Rancher, SedaN } from '@/fonts';
 
 const Testimonials = () => {
   return (
-    <div id="testimonials" className="pb-20 md:pb-10 py-[40px] lg:py-[50px] bg-black lg:px-0 px-4 z-[111] relative">
+    <div  style={{
+      scrollMarginTop:'50px'
+    }} id="testimonials" className="pb-20 md:pb-10 py-[40px] lg:py-[50px] bg-black lg:px-0 px-4 z-[111] relative">
       <div className="m-auto max-w-[900px]">
         <h2
           style={{ lineHeight: '100%' }}
@@ -27,6 +29,7 @@ const Testimonials = () => {
         grabCursor={true}
         centeredSlides={true}
         loop={true}  
+        autoplay={true}
         mousewheel={true}
         navigation={true}
         pagination={false}

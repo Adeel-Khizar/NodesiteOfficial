@@ -66,8 +66,8 @@ const FAQS: React.FC = () => {
 
     return (
         <div className='h-auto relative z-[111] bg-black px-[6vw] py-[45px] lg:py-[80px] flex flex-col justify-center items-start'>
-            <h2 className={`${Rancher} text-4xl  md:text-left text-center md:text-7xl pb-8  text-white `} >Frequently Asked Questions</h2>
-            <p className={`${SedaN} md:text-left text-center text-md md:text-xl text-white `} >Our FAQs section provides quick answers to common inquiries about our services, project timelines, support options, and more.</p>
+            <h2 className={`${Rancher} text-4xl m-auto md:text-left text-center md:text-7xl pb-8  text-white `} >Frequently Asked Questions</h2>
+            <p className={`${SedaN} md:text-left m-auto text-center text-md md:text-xl text-white `} >Our FAQs section provides quick answers to common inquiries about our services, project timelines, support options, and more.</p>
             <div className="container-fluid pt-10 mt-5 mb-5">
                 <div className="row justify-content-center">
                     <div className="col-md-8 mt-2">

@@ -43,7 +43,9 @@ const Team: React.FC = () => {
   };
 
   return (
-    <div id="team" className='z-[11] relative flex bg-white flex-col items-center py-[50px] justify-start'>
+    <div style={{
+      scrollMarginTop:'50px'
+    }}  id="team" className='z-[11] relative flex bg-white flex-col items-center py-[50px] justify-start'>
       <h2 className={`text-4xl ${Rancher} text-center text-black md:text-7xl pb-3`}>Our team of friends</h2>
       <p className={`text-md text-center md:text-xl text-black ${SedaN}`}>Each And Every One Is  Pleasure To Work With</p>
       <div className='teamTabs md:overflow-auto overflow-x-scroll   md:flex gap-4 md:flex-wrap p-5 items-center justify-center w-full'>

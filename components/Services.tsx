@@ -24,7 +24,9 @@ const Services: React.FC = () => {
   }, []);
 
   return (
-    <div className='z-[11] relative flex lg:flex-row flex-col items-center pt-[50px] md:py-[50px] justify-start bg-black'>
+    <div  style={{
+      scrollMarginTop:'50px'
+    }} id="services" className='z-[11] relative flex lg:flex-row flex-col items-center pt-[50px] md:py-[50px] justify-start bg-black'>
       <div className='w-[100%] pt-[3%] lg:pt-0 lg:w-[60%] text-white pl-6  lg:pl-10 pr-4'>
         <h2 className={` ${Rancher} text text-4xl lg:text-[4.5vw]`} style={{ lineHeight: '100%' }}>
            Your Vision, 

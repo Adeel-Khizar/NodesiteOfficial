@@ -56,7 +56,9 @@ const Portfolio: React.FC = () => {
   };
 
   return (
-    <div id="portfolio" className="h-auto lg:px-10 px-4 lg:pt-10 pt-6 z-[111] relative bg-black text-white">
+    <div  style={{
+      scrollMarginTop:'50px'
+    }} id="portfolio" className="h-auto lg:px-10 px-4 lg:pt-10 pt-6 z-[111] relative bg-black text-white">
       <h2 className={`${Rancher} lg:text-[5vw] text-3xl lg:pb-10 font-bold`}>Portfolio <span className="text-white">highlights</span></h2>
       <p className={`text-lg text-gray-300 pt-4 ${SedaN}`}>
         Over 200 successful websites launched. From landing pages to corporate projects, we make you shine online

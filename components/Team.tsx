@@ -15,7 +15,9 @@ const tabsData = [
   { id: 3, title: "Shopify Developers" },
   { id: 4, title: "Wordpress Developers" },
   { id: 5, title: "Hubspot Developers" },
-  { id: 6, title: "Interns" }
+  { id: 6, title: "Interns" },
+  { id: 7, title: "All" }
+
 ];
 
 const Team: React.FC = () => {

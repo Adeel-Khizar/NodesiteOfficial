@@ -234,7 +234,56 @@ body {
       transform: translateY(-44px);
     }
     .TeamS .swiper-slide:nth-child(12) .item {
+      transform: translateY(0px);
+    }
+    
+    .TeamS .swiper-slide:nth-child(13) .item {
       transform: translateY(-44px);
+    }
+    .TeamS .swiper-slide:nth-child(14) .item {
+      transform: translateY(0px);
+    }
+    
+    .TeamS .swiper-slide:nth-child(15) .item {
+      transform: translateY(-44px);
+    }
+    .TeamS .swiper-slide:nth-child(16) .item {
+      transform: translateY(0px);
+    }
+    
+    .TeamS .swiper-slide:nth-child(17) .item {
+      transform: translateY(-44px);
+    }
+    .TeamS .swiper-slide:nth-child(18) .item {
+      transform: translateY(0px);
+    }
+    
+    .TeamS .swiper-slide:nth-child(19) .item {
+      transform: translateY(-44px);
+    }
+    .TeamS .swiper-slide:nth-child(20) .item {
+      transform: translateY(0px);
+    }
+    
+    .TeamS .swiper-slide:nth-child(21) .item {
+      transform: translateY(-44px);
+    }
+    .TeamS .swiper-slide:nth-child(22) .item {
+      transform: translateY(0px);
+    }
+    
+    .TeamS .swiper-slide:nth-child(23) .item {
+      transform: translateY(-44px);
+    }
+    .TeamS .swiper-slide:nth-child(24) .item {
+      transform: translateY(0px);
+    }
+    
+    .TeamS .swiper-slide:nth-child(25) .item {
+      transform: translateY(-44px);
+    }
+    .TeamS .swiper-slide:nth-child(26) .item {
+      transform: translateY(0px);
     }
 }
 
@@ -560,3 +609,71 @@ grid-row-gap: 25px;
     display: -webkit-inline-box;
   }
 }
+
+/* Hamburger/Cross Icon Animation */
+.hamburger-icon {
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger-icon span {
+  display: block;
+  height: 4px;
+  width: 30px;
+  background-color: black;
+  margin: 6px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger-icon.open span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+@media screen and (max-width: 750px){
+  .mainHeader{
+    height: 80px;
+    transition: height 0.5s ease-out;
+  }
+  .mainHeader.open{
+    height: auto !important;
+  }
+  .menu-slide {
+    transform: translateY(-1000%);
+    transition: transform 0.5s ease-out ;
+    opacity: 0;
+  }
+  
+  .menu-slide.open {
+    transform: translateY(0);
+    opacity: 1;
+
+  }
+  
+  /* Contact Button Animation */
+  .hero_atc {
+    transform: translateY(-1000%);
+    transition: transform 0.6s ease-in linear;
+  }
+  
+  .hero_atc.show {
+    transform: translateY(0%);
+
+  }
+  
+  /* Optional: Subtle hover animation for menu items */
+  .nav-item {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .nav-item:hover {
+    transform: scale(1.05);
+  }
+}
+/* Slide-in Menu Animation */
+

@@ -5,16 +5,20 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import 'swiper/css/navigation';
-import { EffectCoverflow, Pagination, Navigation, Scrollbar, Mousewheel } from 'swiper/modules';
+import { EffectCoverflow, Pagination, Navigation, Scrollbar, Mousewheel, Autoplay } from 'swiper/modules';
 import { clientReviews } from '@/constants';
 import Image from 'next/image';
 import { Rancher, SedaN } from '@/fonts';
 
 const Testimonials = () => {
   return (
-    <div  style={{
-      scrollMarginTop:'50px'
-    }} id="testimonials" className="pb-20 md:pb-10 py-[40px] lg:py-[50px] bg-black lg:px-0 px-4 z-[111] relative">
+    <div
+      style={{
+        scrollMarginTop: '50px',
+      }}
+      id="testimonials"
+      className="pb-20 md:pb-10 py-[40px] lg:py-[50px] bg-black lg:px-0 px-4 z-[111] relative"
+    >
       <div className="m-auto max-w-[900px]">
         <h2
           style={{ lineHeight: '100%' }}
@@ -28,12 +32,15 @@ const Testimonials = () => {
         effect={'coverflow'}
         grabCursor={true}
         centeredSlides={true}
-        loop={true}  
-        autoplay={true}
+        loop={true}
+        autoplay={{
+          delay: 2000, // Increased delay for autoplay to work smoothly
+          disableOnInteraction: false, // Keeps autoplay working after interaction
+        }}
         mousewheel={true}
         navigation={true}
         pagination={false}
-        modules={[EffectCoverflow, Pagination, Navigation, Mousewheel, Scrollbar]}
+        modules={[EffectCoverflow, Pagination, Navigation, Mousewheel, Scrollbar, Autoplay]} // Added Autoplay to the modules
         breakpoints={{
           0: {
             slidesPerView: 1,
@@ -45,7 +52,10 @@ const Testimonials = () => {
         className="mySwiper testimonialsSwiperr"
       >
         {clientReviews.map((reviews, index) => (
-          <SwiperSlide key={index} className="flex flex-col gap-10 p-4 lg:p-16 bg-gray-900 rounded-3xl">
+          <SwiperSlide
+            key={index}
+            className="flex flex-col gap-10 p-4 lg:p-16 bg-gray-900 rounded-3xl"
+          >
             <div className="flex gap-20 flex-col">
               <h2
                 className={` ${SedaN} text-white text-md text-center lg:text-xl tracking-wide`}

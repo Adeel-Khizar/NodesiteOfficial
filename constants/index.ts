@@ -440,7 +440,7 @@ export const TeamInfo = [
     id: 18,
     profileImage: '/team6.png',
     profileName: 'Ahmad Malik',
-    profileProfession: 'Front End/Shopify Intern',
+    profileProfession: 'Front End Intern',
     backgroundColor: '#0D92F4',
     tag: [
       { id: 1, tags: 'Interns' },
@@ -525,6 +525,17 @@ export const TeamInfo = [
     tag: [
       { id: 1, tags: 'Interns' },
       { id: 2, tags: 'Sales Operations' },
+      {id:2, tags: 'All'}
+    ] // Array of objects
+  },
+  {
+    id: 27,
+    profileImage: '/team6.png',
+    profileName: 'Qasim',
+    profileProfession: 'Front End Intern',
+    backgroundColor: '#98DED3',
+    tag: [
+      { id: 1, tags: 'Interns' },
       {id:2, tags: 'All'}
     ] // Array of objects
   }

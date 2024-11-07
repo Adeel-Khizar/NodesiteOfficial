@@ -10,13 +10,14 @@ import { TeamInfo } from '@/constants';
 import 'swiper/css/scrollbar';
 
 const tabsData = [
-  { id: 1, title: "Executive" },
-  { id: 2, title: "Sales Operations" },
-  { id: 3, title: "Shopify Developers" },
-  { id: 4, title: "Wordpress Developers" },
-  { id: 5, title: "Hubspot Developers" },
-  { id: 6, title: "Interns" },
-  { id: 7, title: "All" }
+  { id: 1, title: "All" },
+  { id: 2, title: "Executive" },
+  { id: 3, title: "Sales Operations" },
+  { id: 4, title: "Shopify Developers" },
+  { id: 5, title: "Wordpress Developers" },
+  { id: 6, title: "Hubspot Developers" },
+  { id: 7, title: "Interns" },
+  
 
 ];
 

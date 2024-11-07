@@ -18,8 +18,8 @@ export function PorjectCards() {
            style={{
             fontWeight: 900
           }}
-          className={`${SedaN}  font-extrabold text-black text-4xl `}>{item.title}</h2>
-          <p className={`${SedaN} font-normal text-black text-xl`}>{item.description}</p>
+          className={`${SedaN}  font-extrabold text-white text-4xl `}>{item.title}</h2>
+          <p className={`${SedaN} font-normal text-white text-xl`}>{item.description}</p>
         </DirectionAwareHover>
       </Link>
           </div>

@@ -11,7 +11,7 @@ const ProjectCount = () => {
        <h3 className={` text-lg md:text-2xl text-white ${SedaN} `}>Over 200+ Projects Closed</h3>
        <h2 style={{
         lineHeight: "95%"
-       }} className={` ${Rancher}  text-[26px] md:text-[5vw] text-white`}>Creative Agency designing immersive websites from concept to reality <span className="text-[#4CC9FE]"> {fastText} </span></h2>
+       }} className={` ${Rancher}  text-[26px] md:text-[5vw] text-white`}>Creative Agency designing immersive websites from concept to reality <span className="text-orange-500"> {fastText} </span></h2>
        <div>
         <h3 className={`text-lg md:text-2xl text-white ${SedaN} `}>Our Mission:</h3>
         <p className={` text-gray-300 ${SedaN} `}>Turning Visionary Ideas Into Digital Reality, One Pixel At A Time</p>

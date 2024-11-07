@@ -1,6 +1,10 @@
-import { Pontano_Sans, Ramabhadra } from 'next/font/google';
+import { Pontano_Sans, League_Spartan
 
-const unbounded = Ramabhadra
+
+
+} from 'next/font/google';
+
+const unbounded = League_Spartan
 
 ({
   subsets: ['latin'],

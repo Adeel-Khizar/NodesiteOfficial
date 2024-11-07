@@ -14,8 +14,8 @@ export function MoreCaseStudies() {
   return (
     <div className="md:h-[80vh] bg-white p-[5vw] h-auto relative flex-col  flex items-center justify-center">
        <div className="pb-10 flex justify-between items-end md:flex-row flex-col  gap-2 w-full">
-       <h1 className={`text-4xl text-black md:text-6xl ${Rancher} `} >More Case Studies</h1>
-  <Link href="/work" className={`${SedaN} text-lg  text-black underline md:text-2xl`} >See all projects </Link>
+       <h1 className={`text-4xl text-white md:text-6xl ${Rancher} `} >More Case Studies</h1>
+  <Link href="/work" className={`${SedaN} text-lg  text-white underline md:text-2xl`} >See all projects </Link>
        </div>
       <div className=" grid md:gap-16 gap-4  h-full moreCaseStudies">
       {

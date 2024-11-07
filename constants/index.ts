@@ -215,10 +215,10 @@ export const clientReviews = [
   },
   {
     id: 3,
-    Review: "Shout out to NODE for their fantastic work on TPI! This is the biggest and most complicated dev project we have ever produced, and it turned our awesome. Great Work!",
+    Review: "We are grateful to NODE for the excellent work you have accomplished on our E-commerce stores. We appreciate your future efforts, from overseeing the upkeep of The Hemp House MN's store to creating brand-new E-commerce websites with numerous features and integrations. Your expertise and commitment really make you the king in e-commerce solutions!",
     profileImage: '/cm2-logo-light.svg',
-    profileName: 'Katlien',
-    profileProfession: 'CM2 Media'
+    profileName: 'Dawit',
+    profileProfession: 'The Hemp House'
   },
   {
     id: 4,
@@ -241,9 +241,9 @@ export const TeamInfo = [
     profileImage: '/team8.png',
     profileName: 'Adeel Khizer',
     profileProfession: 'Floor Manager/Technical Lead',
-    backgroundColor: '#724657',
+    backgroundColor: '#FF6500',
     tag: [
-      { id: 1, tags: 'Management' }
+      { id: 1, tags: 'Executive' }
     ] // Always an array
   },
   {
@@ -251,10 +251,9 @@ export const TeamInfo = [
     profileImage: '/team6.png',
     profileName: 'Hamza Bakhtiar',
     profileProfession: 'Head Of Sales',
-    backgroundColor: '#668493',
+    backgroundColor: '#219B9D',
     tag: [
-      { id: 1, tags: 'Head of Sales' },
-      { id: 1, tags: 'Sales Coordinators' }
+      { id: 1, tags: 'Sales Operations' }
 
       
     ] // Always an array
@@ -264,10 +263,9 @@ export const TeamInfo = [
     profileImage: '/team6.png',
     profileName: 'Huzaifa Bahadur',
     profileProfession: 'Project Manager/Coordination Support',
-    backgroundColor: '#668493',
+    backgroundColor: '#88C273',
     tag: [
-      { id: 1, tags: 'Management' },
-      { id: 2, tags: 'Sales Coordinators' }
+      { id: 1, tags: 'Executive' }
     ] // Array of objects
   },
   {
@@ -275,7 +273,7 @@ export const TeamInfo = [
     profileImage: '/team6.png',
     profileName: 'Abdul Mannan Abbasi',
     profileProfession: 'Sr. Front End/Shopify Developer',
-    backgroundColor: '#0F664E',
+    backgroundColor: '#859F3D',
     tag: [
       { id: 1, tags: 'Shopify Developers' }
     ] // Always an array
@@ -285,7 +283,7 @@ export const TeamInfo = [
     profileImage: '/team6.png',
     profileName: 'Jabir Ali',
     profileProfession: 'Sr. WordPress Developer/Technical Lead',
-    backgroundColor: '#668493',
+    backgroundColor: '#FFE31A',
     tag: [
       { id: 1, tags: 'Wordpress Developers' }
     ] // Always an array
@@ -295,7 +293,7 @@ export const TeamInfo = [
     profileImage: '/team6.png',
     profileName: 'Umer Nawaz',
     profileProfession: 'Sr. Shopify/HubSpot Developer',
-    backgroundColor: '#668493',
+    backgroundColor: '#D7B26D',
     tag: [
       { id: 1, tags: "Shopify Developers" },
       { id: 2, tags: "Hubspot Developers" }
@@ -306,7 +304,7 @@ export const TeamInfo = [
     profileImage: '/team6.png',
     profileName: 'Umer Farooq',
     profileProfession: 'Sr. Front End/Shopify Developer',
-    backgroundColor: '#668493',
+    backgroundColor: '#A66E38',
     tag: [
       { id: 1, tags: 'Shopify Developers' }
     ] // Always an array
@@ -316,7 +314,7 @@ export const TeamInfo = [
     profileImage: '/team6.png',
     profileName: 'Muhammad Farhan',
     profileProfession: 'Sr. Shopify Developer',
-    backgroundColor: '#668493',
+    backgroundColor: '#FF8000',
     tag: [
       { id: 1, tags: 'Shopify Developers' }
     ] // Always an array
@@ -326,7 +324,7 @@ export const TeamInfo = [
     profileImage: '/team6.png',
     profileName: 'Irfan Khan',
     profileProfession: 'Sr. WordPress Developer',
-    backgroundColor: '#CCE6FF',
+    backgroundColor: '#CA7373',
     tag: [
       { id: 1, tags: 'Wordpress Developers' }
     ] // Always an array
@@ -336,7 +334,7 @@ export const TeamInfo = [
     profileImage: '/team6.png',
     profileName: 'Nafey Ul Din',
     profileProfession: 'Shopify Developer',
-    backgroundColor: '#668493',
+    backgroundColor: '#FA4032',
     tag: [
       { id: 1, tags: 'Shopify Developers' }
     ] // Always an array
@@ -346,7 +344,7 @@ export const TeamInfo = [
     profileImage: '/team6.png',
     profileName: 'Fahad Ali',
     profileProfession: 'Shopify Developer',
-    backgroundColor: '#668493',
+    backgroundColor: '#B03052',
     tag: [
       { id: 1, tags: 'Shopify Developers' }
     ] // Always an array
@@ -356,7 +354,7 @@ export const TeamInfo = [
     profileImage: '/team6.png',
     profileName: 'Malik Osama',
     profileProfession: 'Jr. Shopify Developer',
-    backgroundColor: '#668493',
+    backgroundColor: '#EE66A6',
     tag: [
       { id: 1, tags: 'Shopify Developers' }
     ] // Always an array
@@ -366,7 +364,7 @@ export const TeamInfo = [
     profileImage: '/team6.png',
     profileName: 'Muneeb',
     profileProfession: 'Jr. Shopify Developer',
-    backgroundColor: '#668493',
+    backgroundColor: '#605678',
     tag: [
       { id: 1, tags: 'Shopify Developers' }
     ] // Always an array
@@ -376,7 +374,7 @@ export const TeamInfo = [
     profileImage: '/team6.png',
     profileName: 'Usman Khalid',
     profileProfession: 'Jr. Shopify Developer',
-    backgroundColor: '#668493',
+    backgroundColor: '#133E87',
     tag: [
       { id: 1, tags: 'Shopify Developers' }
     ] // Always an array
@@ -396,7 +394,7 @@ export const TeamInfo = [
     profileImage: '/team6.png',
     profileName: 'Usama Bakhtiar',
     profileProfession: 'Jr. Front End/HubSpot Developer',
-    backgroundColor: '#454243',
+    backgroundColor: '#0B192C',
     tag: [
       { id: 1, tags: 'Hubspot Developers' }
     ] // Always an array
@@ -406,7 +404,7 @@ export const TeamInfo = [
     profileImage: '/team6.png',
     profileName: 'Husnain Rehman',
     profileProfession: 'Jr. Shopify Developer',
-    backgroundColor: '#2B3143',
+    backgroundColor: '#B7B7B7',
     tag: [
       { id: 1, tags: 'Shopify Developers' }
     ] // Always an array
@@ -414,11 +412,11 @@ export const TeamInfo = [
   {
     id: 18,
     profileImage: '/team6.png',
-    profileName: 'Ahmed Malik',
-    profileProfession: 'Front End/Shopify Internee',
-    backgroundColor: '#282E3D',
+    profileName: 'Ahmad Malik',
+    profileProfession: 'Front End/Shopify Intern',
+    backgroundColor: '#0D92F4',
     tag: [
-      { id: 1, tags: 'Internees' }
+      { id: 1, tags: 'Interns' }
     ] // Always an array
   },
   {
@@ -426,7 +424,7 @@ export const TeamInfo = [
     profileImage: '/team6.png',
     profileName: 'Abdul Rafay',
     profileProfession: 'Front End/Shopify Developer',
-    backgroundColor: '#AC2658',
+    backgroundColor: '#FFDC7F',
     tag: [
       { id: 1, tags: 'Shopify Developers' }
     ] // Always an array
@@ -436,9 +434,9 @@ export const TeamInfo = [
     profileImage: '/website_-_female_user-512 1.png',
     profileName: 'Minahil Kanwal',
     profileProfession: 'Sales Coordinator',
-    backgroundColor: '#AC2658',
+    backgroundColor: '#F7EED3',
     tag: [
-      { id: 1, tags: 'Sales Coordinators' }
+      { id: 1, tags: 'Sales Operations' }
     ] // Always an array
   },
   {
@@ -446,42 +444,42 @@ export const TeamInfo = [
     profileImage: '/website_-_female_user-512 1.png',
     profileName: 'Shazmeen Yaqoob',
     profileProfession: 'Sales Coordinator',
-    backgroundColor: '#AC2658',
+    backgroundColor: '#FF4E88',
     tag: [
-      { id: 1, tags: 'Sales Coordinators' }
+      { id: 1, tags: 'Sales Operations' }
     ] // Always an array
   },
   {
     id: 22,
     profileImage: '/team6.png',
     profileName: 'Mujahid Pervez',
-    profileProfession: 'Front End Internee/Sales Coordinator',
-    backgroundColor: '#AC2658',
+    profileProfession: 'Front End Intern/Sales Coordinator',
+    backgroundColor: '#694F8E',
     tag: [
-      { id: 1, tags: 'Internees' },
-      { id: 2, tags: 'Sales Coordinators' }
+      { id: 1, tags: 'Interns' },
+      { id: 2, tags: 'Sales Operations' }
     ] // Array of objects
   },
   {
     id: 23,
     profileImage: '/team6.png',
     profileName: 'Syed Haris Shah',
-    profileProfession: 'Front End Internee/Sales Coordinator',
-    backgroundColor: '#AC2658',
+    profileProfession: 'Front End Intern/Sales Coordinator',
+    backgroundColor: '#10439F',
     tag: [
-      { id: 1, tags: 'Internees' },
-      { id: 2, tags: 'Sales Coordinators' }
+      { id: 1, tags: 'Interns' },
+      { id: 2, tags: 'Sales Operations' }
     ] // Array of objects
   },
   {
     id: 24,
     profileImage: '/team6.png',
     profileName: 'Muzammal Majeed',
-    profileProfession: 'Front End Internee/Sales Coordinator',
-    backgroundColor: '#AC2658',
+    profileProfession: 'Front End Intern/Sales Coordinator',
+    backgroundColor: '#FFFDAF',
     tag: [
-      { id: 1, tags: 'Internees' },
-      { id: 2, tags: 'Sales Coordinators' }
+      { id: 1, tags: 'Interns' },
+      { id: 2, tags: 'Sales Operations' }
     ] // Array of objects
   },
   {
@@ -489,20 +487,20 @@ export const TeamInfo = [
     profileImage: '/website_-_female_user-512 1.png',
     profileName: 'Mehmoona Hammad',
     profileProfession: 'HR Manager',
-    backgroundColor: '#AC2658',
+    backgroundColor: '#FF5858',
     tag: [
-      { id: 1, tags: 'Management' }
+      { id: 1, tags: 'Executive' }
     ] // Always an array
   },
   {
     id: 26,
     profileImage: '/team6.png',
     profileName: 'Awais',
-    profileProfession: 'Front End Internee/Sales Coordinator',
-    backgroundColor: '#AC2658',
+    profileProfession: 'Front End Intern/Sales Coordinator',
+    backgroundColor: '#98DED3',
     tag: [
-      { id: 1, tags: 'Internees' },
-      { id: 2, tags: 'Sales Coordinators' }
+      { id: 1, tags: 'Interns' },
+      { id: 2, tags: 'Sales Operations' }
     ] // Array of objects
   }
 

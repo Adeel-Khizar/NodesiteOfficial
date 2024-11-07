@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { motion } from 'framer-motion';
 import 'swiper/css';
 import { Rancher, SedaN } from '@/fonts';
+import { Mousewheel } from 'swiper/modules';
 
 const Portfolio: React.FC = () => {
   const { cursorText, setCursorText } = useCursor();
@@ -71,9 +72,13 @@ const Portfolio: React.FC = () => {
           )}
         </motion.div>
         <Swiper
+          direction={'horizontal'}
+
+         mousewheel={true}
           ref={swiperRef}
           spaceBetween={ isMobile ? 10: 25}
-          loop={true}
+          loop={false}
+          modules={[Mousewheel]}
           slidesPerView={ isMobile ? 1.1: 1.5}
           className="w-full flex flex-wrap h-auto pt-10 gap-6"
           onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)} // Keep track of the real index

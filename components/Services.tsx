@@ -29,7 +29,7 @@ const Services: React.FC = () => {
         <h2 className={` ${Rancher} text text-4xl lg:text-[4.5vw]`} style={{ lineHeight: '100%' }}>
            Your Vision, 
            <br></br>
-           <span className='text-[#4CC9FE]  font-bold'>
+           <span className='text-orange-500  font-bold'>
            Our Expertise
            </span>
         </h2>
@@ -77,7 +77,7 @@ const Services: React.FC = () => {
                   />
                 </div>
                 <div className='flex flex-col text-white text-start gap-4'>
-                  <h3 className={` text-2xl text-[#4CC9FE]  lg:text-3xl font-bold ${Rancher} `}>{item.title}</h3>
+                  <h3 className={` text-2xl text-orange-500  lg:text-3xl font-bold ${Rancher} `}>{item.title}</h3>
                   <h5 className={`  text-sm lg:text-lg ${SedaN} `}>{item.subtitle}</h5>
                 </div>
               </div>

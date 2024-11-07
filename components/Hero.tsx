@@ -56,8 +56,8 @@ const Hero = () => {
   <h1 style={{
                  lineHeight: '100%',
                  fontWeight: 900
-            }} className={`text-black uppercase  text-[8vw] mb-5 lg:mb-6 md:text-[4.1vw] ${Rancher} `}>Your Trusted  Partner  <br></br> <span className="text-blue-900"> for Success </span></h1>
-            <p className={`text-black pr-4 text- md:text-[1.5rem] ${SedaN} `}>We’re not just a service provider; we’re here to be your partner in innovation. By getting to know your goals, we develope personalized solutions that help you succeed. Let’s team up and make your dreams a reality!</p>
+            }} className={`text-black uppercase  text-[8vw] mb-5 lg:mb-6 md:text-[4.1vw] ${Rancher} `}>Your Trusted  Partner  <br></br> <span className="text-orange-500"> for Success </span></h1>
+            <p className={`text-black pr-4 text- md:text-[1.5rem] ${SedaN} `}>We’re not just a service provider. we’re here to be your partner in innovation. By getting to know your goals, we develope personalized solutions that help you succeed. Let’s team up and make your dreams a reality!</p>
           </div>
           
               <div className='hero_atc flex'>

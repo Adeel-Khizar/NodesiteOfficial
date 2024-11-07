@@ -15,7 +15,7 @@ export const DirectionAwareHover = ({
   className,
 }: {
   imageUrl: string;
-  title:string;
+  title: string;
   children: React.ReactNode | string;
   childrenClassName?: string;
   imageClassName?: string;
@@ -23,50 +23,20 @@ export const DirectionAwareHover = ({
 }) => {
   const ref = useRef<HTMLDivElement>(null);
 
-  const [direction, setDirection] = useState<
-    "top" | "bottom" | "left" | "right" | string
-  >("left");
+  const [hover, setHover] = useState(false); // We just need to track if we are hovering
 
-  const handleMouseEnter = (
-    event: React.MouseEvent<HTMLDivElement, MouseEvent>
-  ) => {
-    if (!ref.current) return;
-
-    const direction = getDirection(event, ref.current);
-    console.log("direction", direction);
-    switch (direction) {
-      case 0:
-        setDirection("top");
-        break;
-      case 1:
-        setDirection("right");
-        break;
-      case 2:
-        setDirection("bottom");
-        break;
-      case 3:
-        setDirection("left");
-        break;
-      default:
-        setDirection("left");
-        break;
-    }
+  const handleMouseEnter = () => {
+    setHover(true); // Set hover state to true when mouse enters
   };
 
-  const getDirection = (
-    ev: React.MouseEvent<HTMLDivElement, MouseEvent>,
-    obj: HTMLElement
-  ) => {
-    const { width: w, height: h, left, top } = obj.getBoundingClientRect();
-    const x = ev.clientX - left - (w / 2) * (w > h ? h / w : 1);
-    const y = ev.clientY - top - (h / 2) * (h > w ? w / h : 1);
-    const d = Math.round(Math.atan2(y, x) / 1.57079633 + 5) % 4;
-    return d;
+  const handleMouseLeave = () => {
+    setHover(false); // Set hover state to false when mouse leaves
   };
 
   return (
     <motion.div
       onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
       ref={ref}
       className={cn(
         "h-full w-full bg-transparent rounded-lg overflow-hidden group/card relative",
@@ -77,10 +47,11 @@ export const DirectionAwareHover = ({
         <motion.div
           className="relative rounded-lg h-full w-full"
           initial="initial"
-          whileHover={direction}
+          whileHover={hover ? "left" : "initial"} // Use left animation on hover
           exit="exit"
         >
-          <motion.div className="group-hover/card:block rounded-lg hidden workHoverOverlay absolute inset-0 w-full h-full z-10 transition duration-500" />
+          <motion.div 
+           className="group-hover/card:block rounded-lg hidden workHoverOverlay absolute inset-0 w-full h-full z-10 transition duration-500" />
           <motion.div
             variants={variants}
             className="h-full w-full rounded-lg relative bg-gray-50 dark:bg-black"
@@ -89,9 +60,14 @@ export const DirectionAwareHover = ({
               ease: "easeOut",
             }}
           >
-            <h1 style={{
-              fontWeight: 900
-            }} className={` ${SedaN} font-extrabold absolute top-0 border-2 rounded-lg border-black z-40 text-3xl bg-white p-3 text-black left-0`}>{title}</h1>
+            <h1
+              style={{
+                fontWeight: 900,
+              }}
+              className={`${SedaN} font-extrabold absolute top-0 border-2 rounded-lg border-black z-40 text-3xl bg-white p-3 text-black left-0`}
+            >
+              {title}
+            </h1>
             <Image
               alt="image"
               className={cn(
@@ -122,29 +98,22 @@ export const DirectionAwareHover = ({
   );
 };
 
+// Variant only for left-side hover effect
 const variants = {
   initial: {
     x: 0,
+    y: 0,
   },
-
   exit: {
     x: 0,
     y: 0,
   },
-  top: {
-    y: 20,
-  },
-  bottom: {
-    y: -20,
-  },
   left: {
-    x: 20,
-  },
-  right: {
-    x: -20,
+    x: 20, // Animate from the left side
   },
 };
 
+// Variant for text with the same left-side animation
 const textVariants = {
   initial: {
     y: 0,
@@ -156,20 +125,8 @@ const textVariants = {
     x: 0,
     opacity: 0,
   },
-  top: {
-    y: -20,
-    opacity: 1,
-  },
-  bottom: {
-    y: 2,
-    opacity: 1,
-  },
   left: {
-    x: -2,
-    opacity: 1,
-  },
-  right: {
     x: 20,
-    opacity: 1,
+    opacity: 1, // Text also appears from the left
   },
 };

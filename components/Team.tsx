@@ -10,13 +10,12 @@ import { TeamInfo } from '@/constants';
 import 'swiper/css/scrollbar';
 
 const tabsData = [
-  { id: 1, title: "Management" },
-  { id: 2, title: "Head of Sales" },
-  { id: 3, title: "Sales Coordinators" },
-  { id: 4, title: "Shopify Developers" },
-  { id: 5, title: "Wordpress Developers" },
-  { id: 6, title: "Hubspot Developers" },
-  { id: 7, title: "Internees" }
+  { id: 1, title: "Executive" },
+  { id: 2, title: "Sales Operations" },
+  { id: 3, title: "Shopify Developers" },
+  { id: 4, title: "Wordpress Developers" },
+  { id: 5, title: "Hubspot Developers" },
+  { id: 6, title: "Interns" }
 ];
 
 const Team: React.FC = () => {
@@ -82,7 +81,7 @@ const Team: React.FC = () => {
           {TeamInfo.filter(filterMembers).map((item) => (
             <SwiperSlide key={item.id} className='bg-transparent flex flex-col p-8 rounded-lg'>
               <div className='item'>
-                <div className='flex h-full transform rotate-1 flex-col items-start gap-6 justify-between'>
+                <div className='flex h-full transform  flex-col items-start gap-6 justify-between'>
                   <div className='relative'>
                     <div style={{ background: `${item.backgroundColor}` }} className={`absolute h-[70%] rounded-2xl -z-10 w-full bottom-0 left-0`}></div>
                     <Suspense fallback={<p>Loading video...</p>}>

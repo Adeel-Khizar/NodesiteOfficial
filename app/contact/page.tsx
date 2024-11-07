@@ -12,7 +12,7 @@ export default function Contact() {
     const formData = new FormData(event.currentTarget);
 
     // Append your access key
-    formData.append("access_key", "bd7ffb83-e3d3-4b88-9b15-2a8d8fa9156d");
+    formData.append("access_key", "59711907-50b8-4efc-86a2-6e0ff5cd342e");
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
@@ -46,9 +46,8 @@ export default function Contact() {
   };
 
   return (
-    <div className=" mt-[90px]  bg-black pb-16 md:pb-32">
-      <div className="p-[5vw]">
-      </div>
+    <div className=" mt-[90px]  bg-black pb-16 md:pb-10">
+   
       <div className='p-[5%] md:px-[5vw] md:mt-0 mt-[0px] relative w-[100%] md:w-[80%] overflow-hidden m-auto'>
         <form onSubmit={handleSubmit} className='bg-transparent w-full z-20 relative rounded-3xl gap-8 contact_form flex flex-col p-[5%] md:p-[3vw] border-2 border-gray-300'>
           <h2 className={`${Rancher} text-4xl lg:text-[4vw]  text-black text-center w-full md:mb-8`}>Get In Touch</h2>

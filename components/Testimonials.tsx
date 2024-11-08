@@ -34,13 +34,14 @@ const Testimonials = () => {
         centeredSlides={true}
         loop={true}
         autoplay={{
-          delay: 2000, // Increased delay for autoplay to work smoothly
+          delay: 2500, // Adjusted delay for smoother transition
           disableOnInteraction: false, // Keeps autoplay working after interaction
         }}
         mousewheel={true}
         navigation={true}
         pagination={false}
-        modules={[EffectCoverflow, Pagination, Navigation, Mousewheel, Scrollbar, Autoplay]} // Added Autoplay to the modules
+        speed={600} // Set speed of transition (in ms)
+        modules={[EffectCoverflow, Pagination, Navigation, Mousewheel, Scrollbar, Autoplay]} // Add Autoplay to the modules
         breakpoints={{
           0: {
             slidesPerView: 1,
@@ -50,6 +51,7 @@ const Testimonials = () => {
           },
         }}
         className="mySwiper testimonialsSwiperr"
+        style={{ transitionDuration: '0.6s' }} // Optional: global transition duration on all elements
       >
         {clientReviews.map((reviews, index) => (
           <SwiperSlide

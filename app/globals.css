@@ -188,7 +188,7 @@ body {
 }
 @media screen and (max-width: 1023px ) {
   .testimonialSwiper .swiper-wrapper{
-    height: 50vh;
+    height: 42vh;
     }
 }
 @media screen and (min-width: 1023px ) {
@@ -461,10 +461,17 @@ grid-row-gap: 25px;
 .PreviousWork div:nth-child(6) { grid-area: 5 / 4 / 8 / 6; } */
 
 .workHoverOverlay {
-  background: rgba(3, 14, 64, 0.7);  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, rgba(3, 14, 64, 0.7), rgba(3, 14, 64, 0.7), rgba(3, 14, 64, 0.7)); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, rgba(3, 14, 64, 0.7), rgba(3, 14, 64, 0.7), rgba(3, 14, 64, 0.7)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  opacity:  0;
+  transition: opacity 0.6s ease-in-out;
+  background: rgba(3, 14, 64, 0.5);  /* Fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, rgba(3, 14, 64, 0.5), rgba(3, 14, 64, 0.5), rgba(3, 14, 64, 0.5)); /* Safari 5.1-6 */
+  background: linear-gradient(to bottom, rgba(3, 14, 64, 0.5), rgba(3, 14, 64, 0.7), rgba(3, 14, 64, 0.5)); /* Standard for all modern browsers */
 }
+
+.workHoverOverlay:hover {
+  opacity: 1; /* Transition to full width on hover */
+}
+
 /* components/Preloader.module.css */
 .testimonialsSwiperr .swiper-scrollbar {
   opacity: 1 !important;

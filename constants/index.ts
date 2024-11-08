@@ -272,7 +272,7 @@ export const TeamInfo = [
     ] // Array of objects
   },
   {
-    id: 25,
+    id: 4,
     profileImage: '/website_-_female_user-512 1.png',
     profileName: 'Mehmoona Hammad',
     profileProfession: 'HR Manager',
@@ -283,7 +283,7 @@ export const TeamInfo = [
     ] // Always an array
   },
   {
-    id: 4,
+    id: 5,
     profileImage: '/team6.png',
     profileName: 'Abdul Mannan Abbasi',
     profileProfession: 'Sr. Front End/Shopify Developer',
@@ -294,7 +294,7 @@ export const TeamInfo = [
     ] // Always an array
   },
   {
-    id: 5,
+    id: 6,
     profileImage: '/team6.png',
     profileName: 'Jabir Ali',
     profileProfession: 'Sr. WordPress Developer/Technical Lead',
@@ -305,7 +305,7 @@ export const TeamInfo = [
     ] // Always an array
   },
   {
-    id: 6,
+    id: 7,
     profileImage: '/team6.png',
     profileName: 'Umer Nawaz',
     profileProfession: 'Sr. Shopify/HubSpot Developer',
@@ -316,7 +316,7 @@ export const TeamInfo = [
     ] // Array of objects
   },
   {
-    id: 7,
+    id: 8,
     profileImage: '/team6.png',
     profileName: 'Umer Farooq',
     profileProfession: 'Sr. Front End/Shopify Developer',
@@ -327,7 +327,7 @@ export const TeamInfo = [
     ] // Always an array
   },
   {
-    id: 8,
+    id: 9,
     profileImage: '/team6.png',
     profileName: 'Muhammad Farhan',
     profileProfession: 'Sr. Shopify Developer',
@@ -338,7 +338,7 @@ export const TeamInfo = [
     ] // Always an array
   },
   {
-    id: 9,
+    id: 10,
     profileImage: '/team6.png',
     profileName: 'Irfan Khan',
     profileProfession: 'Sr. WordPress Developer',
@@ -349,7 +349,7 @@ export const TeamInfo = [
     ] // Always an array
   },
   {
-    id: 10,
+    id: 11,
     profileImage: '/team6.png',
     profileName: 'Nafey Ul Din',
     profileProfession: 'Shopify Developer',
@@ -360,7 +360,7 @@ export const TeamInfo = [
     ] // Always an array
   },
   {
-    id: 11,
+    id: 12,
     profileImage: '/team6.png',
     profileName: 'Fahad Ali',
     profileProfession: 'Shopify Developer',
@@ -371,7 +371,7 @@ export const TeamInfo = [
     ] // Always an array
   },
   {
-    id: 12,
+    id: 13,
     profileImage: '/team6.png',
     profileName: 'Malik Osama',
     profileProfession: 'Jr. Shopify Developer',
@@ -382,7 +382,7 @@ export const TeamInfo = [
     ] // Always an array
   },
   {
-    id: 13,
+    id: 14,
     profileImage: '/team6.png',
     profileName: 'Muneeb',
     profileProfession: 'Jr. Shopify Developer',
@@ -393,7 +393,7 @@ export const TeamInfo = [
     ] // Always an array
   },
   {
-    id: 14,
+    id: 15,
     profileImage: '/team6.png',
     profileName: 'Usman Khalid',
     profileProfession: 'Jr. Shopify Developer',
@@ -404,7 +404,7 @@ export const TeamInfo = [
     ] // Always an array
   },
   {
-    id: 15,
+    id: 16,
     profileImage: '/team6.png',
     profileName: 'Junaid Hassan',
     profileProfession: 'Jr. Wordpress Developer',
@@ -415,7 +415,7 @@ export const TeamInfo = [
     ] // Always an array
   },
   {
-    id: 16,
+    id: 17,
     profileImage: '/team6.png',
     profileName: 'Usama Bakhtiar',
     profileProfession: 'Jr. Front End/HubSpot Developer',
@@ -426,7 +426,7 @@ export const TeamInfo = [
     ] // Always an array
   },
   {
-    id: 17,
+    id: 18,
     profileImage: '/team6.png',
     profileName: 'Husnain Rehman',
     profileProfession: 'Jr. Shopify Developer',
@@ -437,7 +437,7 @@ export const TeamInfo = [
     ] // Always an array
   },
   {
-    id: 18,
+    id: 19,
     profileImage: '/team6.png',
     profileName: 'Ahmad Malik',
     profileProfession: 'Front End Intern',
@@ -448,7 +448,7 @@ export const TeamInfo = [
     ] // Always an array
   },
   {
-    id: 19,
+    id: 20,
     profileImage: '/team6.png',
     profileName: 'Abdul Rafay',
     profileProfession: 'Front End/Shopify Developer',
@@ -459,7 +459,7 @@ export const TeamInfo = [
     ] // Always an array
   },
   {
-    id: 20,
+    id: 21,
     profileImage: '/website_-_female_user-512 1.png',
     profileName: 'Minahil Kanwal',
     profileProfession: 'Sales Coordinator',
@@ -470,7 +470,18 @@ export const TeamInfo = [
     ] // Always an array
   },
   {
-    id: 21,
+    id: 22,
+    profileImage: '/website_-_female_user-512 1.png',
+    profileName: 'Sidra Saleem',
+    profileProfession: 'Sales Coordinator',
+    backgroundColor: '#F7EED3',
+    tag: [
+      { id: 1, tags: 'Sales Operations' },
+      {id:2, tags: 'All'}
+    ] // Always an array
+  },
+  {
+    id: 23,
     profileImage: '/website_-_female_user-512 1.png',
     profileName: 'Shazmeen Yaqoob',
     profileProfession: 'Sales Coordinator',
@@ -481,7 +492,7 @@ export const TeamInfo = [
     ] // Always an array
   },
   {
-    id: 22,
+    id: 24,
     profileImage: '/team6.png',
     profileName: 'Mujahid Pervez',
     profileProfession: 'Front End Intern/Sales Coordinator',
@@ -493,7 +504,7 @@ export const TeamInfo = [
     ] // Array of objects
   },
   {
-    id: 23,
+    id: 25,
     profileImage: '/team6.png',
     profileName: 'Syed Haris Shah',
     profileProfession: 'Front End Intern/Sales Coordinator',
@@ -505,7 +516,7 @@ export const TeamInfo = [
     ] // Array of objects
   },
   {
-    id: 24,
+    id: 26,
     profileImage: '/team6.png',
     profileName: 'Muzammal Majeed',
     profileProfession: 'Front End Intern/Sales Coordinator',
@@ -517,7 +528,7 @@ export const TeamInfo = [
     ] // Array of objects
   },
   {
-    id: 26,
+    id: 27,
     profileImage: '/team6.png',
     profileName: 'Awais',
     profileProfession: 'Front End Intern/Sales Coordinator',
@@ -529,16 +540,17 @@ export const TeamInfo = [
     ] // Array of objects
   },
   {
-    id: 27,
+    id: 28,
     profileImage: '/team6.png',
-    profileName: 'Qasim',
+    profileName: 'Asim Khan',
     profileProfession: 'Front End Intern',
     backgroundColor: '#98DED3',
     tag: [
       { id: 1, tags: 'Interns' },
       {id:2, tags: 'All'}
     ] // Array of objects
-  }
+  },
+ 
 
 ];
 

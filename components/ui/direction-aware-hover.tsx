@@ -50,21 +50,24 @@ export const DirectionAwareHover = ({
           whileHover={hover ? "left" : "initial"} // Use left animation on hover
           exit="exit"
         >
-          <motion.div 
-           className="group-hover/card:block rounded-lg hidden workHoverOverlay absolute inset-0 w-full h-full z-10 transition duration-500" />
+              <motion.div
+        className="workHoverOverlay absolute inset-0  h-full z-10 rounded-lg bg-black  "
+         // Fade out to opacity 0 when not hovered
+    
+      />
           <motion.div
             variants={variants}
             className="h-full w-full rounded-lg relative bg-gray-50 dark:bg-black"
             transition={{
-              duration: 0.2,
-              ease: "easeOut",
+              duration: 0.4,
+              ease: "easeInOut",
             }}
           >
             <h1
               style={{
                 fontWeight: 900,
               }}
-              className={`${SedaN} font-extrabold absolute top-0 border-2 rounded-lg border-black z-40 text-3xl bg-white p-3 text-black left-0`}
+              className={`${SedaN} font-extrabold  absolute top-0 border-2 rounded-lg border-black z-[1111] text-3xl bg-white p-3 text-black left-0`}
             >
               {title}
             </h1>

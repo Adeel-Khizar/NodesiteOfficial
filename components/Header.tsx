@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import logoUrl from '/public/Capture-removebg-preview 1.png'
 import { megaMenu, Nav_links } from '@/constants';
 import Link from 'next/link';
+import { SedaN } from '@/fonts';
 
 const Header = () => {
   const [menu, setMenu] = useState(false);
@@ -24,7 +25,7 @@ const Header = () => {
           <div className="relative" key={link.id}>
             <Link 
               onClick={() => { setMenu(prev => !prev); }}
-              className="text-lg text-black"
+              className={`${SedaN} text-xl text-black`}
               href={link.url}
             >
               {link.label}

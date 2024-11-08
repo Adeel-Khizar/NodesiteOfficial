@@ -25,8 +25,8 @@ export function MoreCaseStudies() {
         <DirectionAwareHover title={item.title} imageUrl={item.Imgurl}>
           <h2 style={{
             fontWeight: '900'
-          }} className={`${SedaN}  text-black  text-4xl `}>{item.title}</h2>
-          <p className={`${SedaN} font-normal text-black text-xl`}>{item.description}</p>
+          }} className={`${SedaN}  text-white  text-4xl `}>{item.title}</h2>
+          <p className={`${SedaN} font-normal text-white text-xl`}>{item.description}</p>
         </DirectionAwareHover>
       </Link>
     </div>

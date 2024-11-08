@@ -48,13 +48,13 @@ const Team: React.FC = () => {
       scrollMarginTop:'50px'
     }}  id="team" className='z-[11] relative flex bg-white flex-col items-center py-[50px] justify-start'>
       <h2 className={`text-4xl ${Rancher} text-center text-black md:text-7xl pb-3`}>Our team of friends</h2>
-      <p className={`text-md text-center md:text-xl text-black ${SedaN}`}>Each And Every One Is  Pleasure To Work With</p>
-      <div className='teamTabs md:overflow-auto overflow-x-scroll   md:flex gap-4 md:flex-wrap p-5 items-center justify-center w-full'>
+      <p className={`text-md text-center md:text-2xl text-black ${SedaN}`}>Each And Every One Is  Pleasure To Work With</p>
+      <div className='teamTabs md:overflow-auto overflow-x-scroll   md:flex  md:flex-wrap p-5 items-center justify-center w-full'>
         {tabsData.map((item) => (
           <div 
             key={item.id} 
             onClick={() => setActive(item.title)} 
-            className={`cursor-pointer min-w-fit ${active === item.title ? 'active' : ''}`} // Adjust active class condition
+            className={`${SedaN} cursor-pointer mx-2 min-w-fit ${active === item.title ? 'active' : ''}`} // Adjust active class condition
           >
             {item.title}
           </div>
@@ -80,11 +80,16 @@ const Team: React.FC = () => {
           spaceBetween={0}
           mousewheel={true}
           scrollbar={true}
+          speed={600} // Smooth transition speed
           modules={[Mousewheel, Scrollbar]}
           className="mySwiper TeamS lg:px-[5%] rounded-lg overflow-hidden"
         >
           {TeamInfo.filter(filterMembers).map((item) => (
-            <SwiperSlide key={item.id} className='bg-transparent flex flex-col p-8 rounded-lg'>
+            <SwiperSlide 
+              style={{
+                transition:'transform 0.6s ease-in-out '
+              }}
+            key={item.id} className='bg-transparent flex flex-col p-8 rounded-lg'>
               <div className='item'>
                 <div className='flex h-full transform  flex-col items-start gap-6 justify-between'>
                   <div className='relative'>
@@ -102,8 +107,8 @@ const Team: React.FC = () => {
                     </Suspense>
                   </div>
                   <div className='flex flex-col text-black text-start'>
-                    <h3 className={` ${Rancher} text-md lg:text-xl font-bold`}>{item.profileName}</h3>
-                    <h5 className={`text-sm lg:text-md ${SedaN}`}>{item.profileProfession}</h5>
+                    <h3 className={` ${Rancher} text-md lg:text-2xl font-bold`}>{item.profileName}</h3>
+                    <h5 className={`text-sm lg:text-lg ${SedaN}`}>{item.profileProfession}</h5>
                   </div>
                 </div>
               </div>

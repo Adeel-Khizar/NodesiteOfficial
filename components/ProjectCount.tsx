@@ -14,7 +14,7 @@ const ProjectCount = () => {
        }} className={` ${Rancher}  text-[26px] md:text-[5vw] text-white`}>Creative Agency designing immersive websites from concept to reality <span className="text-orange-500"> {fastText} </span></h2>
        <div>
         <h3 className={`text-lg md:text-2xl text-white ${SedaN} `}>Our Mission:</h3>
-        <p className={` text-gray-300 ${SedaN} `}>Turning Visionary Ideas Into Digital Reality, One Pixel At A Time</p>
+        <p className={` text-gray-300 md:text-xl ${SedaN} `}>Turning Visionary Ideas Into Digital Reality, One Pixel At A Time</p>
        </div>
     </div>
     </div>

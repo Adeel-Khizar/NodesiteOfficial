@@ -15,7 +15,7 @@ export default function Page({ params }: { params: { slug: string } }) {
                     <div key={index}> {/* Add a unique key for each item */}
                         <div className="h-[65vh] md:h-[70vh] md:flex-row flex-col flex items-center justify-center">
                             <div className="w-full flex md:items-end justify-start p-[5vw] h-full md:w-[65%]">
-                                <h1 className={`text-6xl md:text-[6vw] ${Rancher}`}>{item.title}</h1>
+                                <h1 className={`text-6xl text-black md:text-[6vw] ${Rancher}`}>{item.title}</h1>
                             </div>
                             <div
                                 style={{
@@ -35,7 +35,7 @@ export default function Page({ params }: { params: { slug: string } }) {
                                 </div>
                                 <div className="md:w-[60%] w-full">
                                     <h2 className={` ${Rancher} text-5xl text-black pb-6`}>Project Brief</h2>
-                                    <p className={`text-lg ${SedaN}`}>
+                                    <p className={`text-lg text-black ${SedaN}`}>
                                         {item.description1}
                                     </p>
                                 </div>
@@ -77,7 +77,7 @@ export default function Page({ params }: { params: { slug: string } }) {
                                 <p className={`${SedaN} w-full text-md text-black md:text-2xl`}>
                                     {item.resultDes}
                                 </p>
-                                <Link href={item.link} className={`px-12 py-2 border-2 text-black bg-white border-gray-900 rounded-full max-w-fit ${Rancher}`}>View Project</Link>
+                                <Link target="_blank" href={item.link} className={`px-12 py-2 border-2 text-black bg-transparent  border-gray-900 rounded-full max-w-fit ${Rancher}`}>View Project</Link>
                             </div>
                         </div>
                         {/* <div className="w-full">

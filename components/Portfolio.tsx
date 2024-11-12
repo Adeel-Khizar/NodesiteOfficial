@@ -114,6 +114,7 @@ const Portfolio: React.FC = () => {
                     pointerEvents: 'none',
                     transition: 'transform 0.5s ease', // Smooth video transition
                   }}
+                  playsInline
                   controls
                   autoPlay
                   loop

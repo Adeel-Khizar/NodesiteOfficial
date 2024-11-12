@@ -550,6 +550,28 @@ export const TeamInfo = [
       {id:2, tags: 'All'}
     ] // Array of objects
   },
+  {
+    id: 29,
+    profileImage: '/website_-_female_user-512 1.png',
+    profileName: 'Fatima Baber',
+    profileProfession: 'Front End/Shopify Intern',
+    backgroundColor: '#98DED3',
+    tag: [
+      { id: 1, tags: 'Interns' },
+      {id:2, tags: 'All'}
+    ] // Array of objects
+  },
+  {
+    id: 30,
+    profileImage: '/website_-_female_user-512 1.png',
+    profileName: 'Sehrish Shabbir',
+    profileProfession: 'Front End/Shopify Intern',
+    backgroundColor: '#98DED3',
+    tag: [
+      { id: 1, tags: 'Interns' },
+      {id:2, tags: 'All'}
+    ] // Array of objects
+  },
  
 
 ];

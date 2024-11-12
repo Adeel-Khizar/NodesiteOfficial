@@ -191,10 +191,18 @@ body {
     height: 42vh;
     }
 }
-@media screen and (min-width: 1023px ) {
+@media screen and (min-width: 1023px) and (max-width: 1400px) {
   .testimonialSwiper .swiper-wrapper{
     height: 60vh;
     }
+}
+@media screen and (min-width: 1400px) {
+  .testimonialSwiper .swiper-wrapper{
+    height: 55vh;
+    }
+}
+@media screen and (min-width: 1023px ) {
+  
     .TeamS .swiper-slide:nth-child(1) .item {
       transform: translateY(-44px);
     }

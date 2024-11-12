@@ -89,13 +89,14 @@ const Team: React.FC = () => {
               style={{
                 transition:'transform 0.6s ease-in-out '
               }}
-            key={item.id} className='bg-transparent flex flex-col p-8 rounded-lg'>
+            key={item.id} className='bg-transparent flex  overflow-hidden flex-col p-8 rounded-lg'>
               <div className='item'>
                 <div className='flex h-full transform  flex-col items-start gap-6 justify-between'>
                   <div className='relative'>
                     <div style={{ background: `${item.backgroundColor}` }} className={`absolute h-[70%] rounded-2xl -z-10 w-full bottom-0 left-0`}></div>
                     <Suspense fallback={<p>Loading video...</p>}>
                     <Image
+                    className='rounded-2xl'
                       style={{ objectFit: "cover" }}
                       src={item.profileImage}
                       height={1500}

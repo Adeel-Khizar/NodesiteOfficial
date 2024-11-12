@@ -11,7 +11,7 @@ export function PorjectCards() {
       <div className="PreviousWork  p-[5vw]">
       {
         previousWork.map((item) => (
-          <div className="workCard">
+          <div className="workCard rounded-lg">
             <Link href={`/work/casestudies/${item.slug}`} >
             <DirectionAwareHover title={item.title} imageUrl={item.Imgurl}>
           <h2 

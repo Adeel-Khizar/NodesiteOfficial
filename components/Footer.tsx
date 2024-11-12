@@ -15,7 +15,7 @@ const Footer = () => {
         <div className='lg:w-[60%] w-full'>
             <h5 className={` text-md  text-gray-500 pb-8 ${Rancher} `}>Get In Touch</h5>
             <h3 className={`lg:text-[4.5vw] text-black text-5xl pb-20 ${SedaN} `}>More words - less code Say hi!</h3>
-            <Link className={` text-lg  underline ${SedaN} `} href="/contact">Contact Us</Link>
+            <Link className={` text-lg  text-black underline ${SedaN} `} href="/contact">Contact Us</Link>
         </div>
         </div>
         

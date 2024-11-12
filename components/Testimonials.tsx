@@ -17,7 +17,7 @@ const Testimonials = () => {
         scrollMarginTop: '50px',
       }}
       id="testimonials"
-      className="pb-20 md:pb-10 py-[40px] lg:py-[50px] bg-black lg:px-0 px-4 z-[111] relative"
+      className="pb-0 md:pb-10 py-[40px] lg:py-[50px] bg-black lg:px-0 px-4 z-[111] relative"
     >
       <div className="m-auto max-w-[900px]">
         <h2

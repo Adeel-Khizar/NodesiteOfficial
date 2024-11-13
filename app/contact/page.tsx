@@ -14,9 +14,20 @@ export default function Contact() {
       const scriptId = 'recaptcha-script';
       if (!document.getElementById(scriptId)) {
         const script = document.createElement('script');
-        script.src = 'https://www.google.com/recaptcha/api.js?render=explicit';
+        script.src = 'https://www.google.com/recaptcha/api.js?render=explicit'; // This is for explicit rendering
         script.async = true;
         script.id = scriptId;
+        script.onload = () => {
+          // Once the script is loaded, initialize the reCAPTCHA widget
+          if (typeof grecaptcha !== 'undefined') {
+            grecaptcha.ready(() => {
+              grecaptcha.render('recaptcha-container', {
+                sitekey: '6Lf-130qAAAAAGh8qfnWKlUvWTv0ZEQuzOefqvsx', // Make sure to use your actual sitekey here
+                callback: onRecaptchaChange
+              });
+            });
+          }
+        };
         document.body.appendChild(script);
       }
     };
@@ -133,7 +144,7 @@ export default function Contact() {
           </div>
 
           {/* reCAPTCHA widget */}
-          <div className="g-recaptcha" data-sitekey="6Lf-130qAAAAAGh8qfnWKlUvWTv0ZEQuzOefqvsx" data-callback={onRecaptchaChange}></div>
+          <div id="recaptcha-container" className="g-recaptcha"></div>
 
           <button type="submit" className={`bg-black font-bold hover:shadow-lg hover:shadow-green-400 transition-shadow duration-500 text-lg my-4 md:text-2xl text-white py-2 px-10 min-w-fit w-fit rounded-md mx-auto ${SedaN}`}>Submit</button>
         </form>

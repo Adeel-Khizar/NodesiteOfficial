@@ -11,10 +11,10 @@ export default function Contact() {
 
   useEffect(() => {
     const loadRecaptcha = () => {
-      const scriptId = '6Lf-130qAAAAAGh8qfnWKlUvWTv0ZEQuzOefqvsx';
+      const scriptId = 'recaptcha-script';
       if (!document.getElementById(scriptId)) {
         const script = document.createElement('script');
-        script.src = `https://www.google.com/recaptcha/api.js`;
+        script.src = 'https://www.google.com/recaptcha/api.js?render=explicit';
         script.async = true;
         script.id = scriptId;
         document.body.appendChild(script);

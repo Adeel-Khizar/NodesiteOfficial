@@ -11,7 +11,7 @@ export default function Contact() {
 
   useEffect(() => {
     const loadRecaptcha = () => {
-      const scriptId = 'recaptcha-key';
+      const scriptId = '6Lf-130qAAAAAGh8qfnWKlUvWTv0ZEQuzOefqvsx';
       if (!document.getElementById(scriptId)) {
         const script = document.createElement('script');
         script.src = `https://www.google.com/recaptcha/api.js`;

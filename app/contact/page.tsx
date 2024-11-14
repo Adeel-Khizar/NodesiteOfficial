@@ -125,7 +125,7 @@ export default function Contact() {
           </div>
 
           {/* Add the reCAPTCHA widget */}
-          <div className="g-recaptcha" data-sitekey='6LcZsn4qAAAAAF-OVQ_upZAKANJL65q70MEWHroZ' data-callback="handleCaptcha"></div>
+          <div className="g-recaptcha" data-sitekey='6LcZsn4qAAAAAF-OVQ_upZAKANJL65q70MEWHroZ' data-callback="handleCaptcha" aria-required="true"></div>
           {captchaError && (
             <p className="text-red-500 text-sm mt-2">Please complete the reCAPTCHA to submit the form.</p>
           )}

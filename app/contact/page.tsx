@@ -7,6 +7,7 @@ export default function Contact() {
   const [popupVisible, setPopupVisible] = useState(false);
   const [popupMessage, setPopupMessage] = useState('');
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+  const [captchaError, setCaptchaError] = useState(false);
 
   // Load the reCAPTCHA script
   useEffect(() => {
@@ -18,6 +19,7 @@ export default function Contact() {
     // Define handleCaptcha globally
     (window as any).handleCaptcha = (token: string) => {
       setCaptchaToken(token);
+      setCaptchaError(false); // Remove the error message when reCAPTCHA is completed
     };
   }, []);
 
@@ -26,8 +28,7 @@ export default function Contact() {
 
     // Check if reCAPTCHA is complete
     if (!captchaToken) {
-      setPopupMessage("Please complete the reCAPTCHA.");
-      setPopupVisible(true);
+      setCaptchaError(true);
       return;
     }
 
@@ -125,6 +126,9 @@ export default function Contact() {
 
           {/* Add the reCAPTCHA widget */}
           <div className="g-recaptcha" data-sitekey='6LcZsn4qAAAAAF-OVQ_upZAKANJL65q70MEWHroZ' data-callback="handleCaptcha"></div>
+          {captchaError && (
+            <p className="text-red-500 text-sm mt-2">Please complete the reCAPTCHA to submit the form.</p>
+          )}
 
           <button type="submit" className={`bg-black font-bold hover:shadow-lg hover:shadow-green-400 transition-shadow duration-500 text-lg my-4 md:text-2xl text-white py-2 px-10 min-w-fit w-fit rounded-md mx-auto ${SedaN} `}>Submit</button>
         </form>

@@ -14,6 +14,11 @@ export default function Contact() {
     script.src = `https://www.google.com/recaptcha/api.js`;
     script.async = true;
     document.body.appendChild(script);
+
+    // Define handleCaptcha globally
+    (window as any).handleCaptcha = (token: string) => {
+      setCaptchaToken(token);
+    };
   }, []);
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
@@ -60,11 +65,6 @@ export default function Contact() {
 
   const closePopup = () => {
     setPopupVisible(false);
-  };
-
-  // Callback for when reCAPTCHA completes
-  const handleCaptcha = (token: string | null) => {
-    setCaptchaToken(token);
   };
 
   return (

@@ -1,17 +1,32 @@
 "use client";
 
 import { Rancher, SedaN } from '@/fonts';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 export default function Contact() {
   const [popupVisible, setPopupVisible] = useState(false);
   const [popupMessage, setPopupMessage] = useState('');
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+
+  // Load the reCAPTCHA script
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = `https://www.google.com/recaptcha/api.js`;
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const formData = new FormData(event.currentTarget);
 
-    // Append your access key
+    // Check if reCAPTCHA is complete
+    if (!captchaToken) {
+      setPopupMessage("Please complete the reCAPTCHA.");
+      setPopupVisible(true);
+      return;
+    }
+
+    const formData = new FormData(event.currentTarget);
     formData.append("access_key", "59711907-50b8-4efc-86a2-6e0ff5cd342e");
 
     const object = Object.fromEntries(formData);
@@ -31,6 +46,8 @@ export default function Contact() {
       if (result.success) {
         setPopupMessage("Form submitted successfully!");
         setPopupVisible(true);
+        setCaptchaToken(null); // Reset reCAPTCHA token
+        (window as any).grecaptcha.reset(); // Reset the reCAPTCHA widget
       } else {
         setPopupMessage("Form submission error. Please try again.");
         setPopupVisible(true);
@@ -45,12 +62,16 @@ export default function Contact() {
     setPopupVisible(false);
   };
 
+  // Callback for when reCAPTCHA completes
+  const handleCaptcha = (token: string | null) => {
+    setCaptchaToken(token);
+  };
+
   return (
-    <div className=" mt-[90px]  bg-black pb-16 md:pb-10">
-   
+    <div className="mt-[90px] bg-black pb-16 md:pb-10">
       <div className='p-[5%] md:px-[5vw] md:mt-0 mt-[0px] relative w-[100%] md:w-[80%] overflow-hidden m-auto'>
         <form onSubmit={handleSubmit} className='bg-transparent w-full z-20 relative rounded-3xl gap-8 contact_form flex flex-col p-[5%] md:p-[3vw] border-2 border-gray-300'>
-          <h2 className={`${Rancher} text-4xl lg:text-[4vw]  text-black text-center w-full md:mb-8`}>Get In Touch</h2>
+          <h2 className={`${Rancher} text-4xl lg:text-[4vw] text-black text-center w-full md:mb-8`}>Get In Touch</h2>
 
           <div className='flex gap-8 flex-col w-full'>
             <div className='flex gap-4 w-full items-center justify-start'>
@@ -62,9 +83,6 @@ export default function Contact() {
                 required 
               />
             </div>
-
-           
-
           </div>
 
           <div className='w-full flex gap-4'>
@@ -78,23 +96,25 @@ export default function Contact() {
           </div>
 
           <div className='flex gap-4 w-full items-center justify-start'>
-              <input 
-                className={` w-full bg-transparent ${SedaN} `}
-                type="text" 
-                name="phone" 
-                placeholder='Enter phone number *' 
-                required 
-              />
-            </div>
-            <div className='flex gap-4 w-full items-center justify-start'>
-              <input 
-                className={`w-full bg-transparent ${SedaN} `} 
-                type="text" 
-                name="subject" 
-                placeholder='Enter subject *' 
-                required 
-              />
-            </div>
+            <input 
+              className={`w-full bg-transparent ${SedaN} `}
+              type="text" 
+              name="phone" 
+              placeholder='Enter phone number *' 
+              required 
+            />
+          </div>
+
+          <div className='flex gap-4 w-full items-center justify-start'>
+            <input 
+              className={`w-full bg-transparent ${SedaN} `} 
+              type="text" 
+              name="subject" 
+              placeholder='Enter subject *' 
+              required 
+            />
+          </div>
+
           <div className='flex gap-4 items-center justify-start'>
             <textarea 
               className={`w-full bg-transparent border-black ${SedaN} `} 
@@ -102,6 +122,9 @@ export default function Contact() {
               placeholder='Enter your message (optional) ' 
             />
           </div>
+
+          {/* Add the reCAPTCHA widget */}
+          <div className="g-recaptcha" data-sitekey='6LcZsn4qAAAAAF-OVQ_upZAKANJL65q70MEWHroZ' data-callback="handleCaptcha"></div>
 
           <button type="submit" className={`bg-black font-bold hover:shadow-lg hover:shadow-green-400 transition-shadow duration-500 text-lg my-4 md:text-2xl text-white py-2 px-10 min-w-fit w-fit rounded-md mx-auto ${SedaN} `}>Submit</button>
         </form>

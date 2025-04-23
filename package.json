@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "@next/font": "^14.2.15",
     "@react-three/drei": "^9.114.3",
     "@react-three/fiber": "^8.17.10",
@@ -21,6 +23,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-google-recaptcha-v3": "^1.10.1",
+    "react-icons": "^5.5.0",
     "swiper": "^11.1.14",
     "tailwind-merge": "^2.5.3",
     "three": "^0.169.0",

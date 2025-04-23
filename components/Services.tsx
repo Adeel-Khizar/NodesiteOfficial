@@ -67,11 +67,11 @@ const Services: React.FC = () => {
         {/* Swiper Component */}
         <Swiper
           direction={isMobile ? "horizontal" : "vertical"}
-          slidesPerView={isMobile ? 1.2 : 1.2}
+          slidesPerView={isMobile ? 1.4 : 1.4}
           spaceBetween={20}
           mousewheel={true}
           pagination={{ clickable: false }}
-          speed={500} // Smooth transition speed (in ms)
+          speed={500}
           modules={[Mousewheel]}
           className="mySwiper lg:px-[5%] rounded-lg overflow-hidden testimonialSwiper"
         >
@@ -79,9 +79,9 @@ const Services: React.FC = () => {
             <SwiperSlide
               key={item.id}
               className="bg-[#1A1C21] flex flex-col p-8 rounded-lg"
-              style={{ height: "auto" }}
+              style={{ height: "fit-content" }}
             >
-              <div className="flex h-full flex-col items-start justify-between">
+              <div className="flex h-auto flex-col items-start justify-between">
                 {/* Image Section */}
                 <div className="md:w-[150px] md:h-[150px] w-[100px] h-[100px] min-h-[100px] min-w-[100px] md:min-h-[150px] md:min-w-[150px]">
                   <Image
@@ -98,7 +98,7 @@ const Services: React.FC = () => {
                 </div>
 
                 {/* Text Section */}
-                <div className="flex flex-col text-white text-start gap-4 mt-9">
+                <div className="flex flex-col text-white text-start mt-12">
                   <h3
                     className={`text-2xl text-orange-500 lg:text-3xl font-bold ${Rancher}`}
                     style={{

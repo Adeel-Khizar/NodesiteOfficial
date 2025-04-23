@@ -79,7 +79,7 @@ const Services: React.FC = () => {
             <SwiperSlide
               key={item.id}
               className="bg-[#1A1C21] flex flex-col p-8 rounded-lg"
-              style={{ height: "auto" }} // Ensure full height for each slide
+              style={{ height: "auto" }}
             >
               <div className="flex h-full flex-col items-start justify-between">
                 {/* Image Section */}
@@ -98,7 +98,7 @@ const Services: React.FC = () => {
                 </div>
 
                 {/* Text Section */}
-                <div className="flex flex-col text-white text-start gap-4 mt-12">
+                <div className="flex flex-col text-white text-start gap-4 mt-9">
                   <h3
                     className={`text-2xl text-orange-500 lg:text-3xl font-bold ${Rancher}`}
                     style={{

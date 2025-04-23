@@ -11,7 +11,7 @@ import {
   faTwitter,
   faFacebookF,
 } from "@fortawesome/free-brands-svg-icons";
-import { FaStar } from "react-icons/fa";
+import { FaStar, FaEnvelope } from "react-icons/fa";
 import { OswaldFont, PoppinsFont, OutfitFont } from "@/fonts";
 
 declare global {
@@ -84,8 +84,7 @@ const Footer = () => {
     },
     {
       region: "ASIA",
-      address:
-        "VIP, Service Road East, Ghori Town, Islamabad, 44000, Islamabad, 55000",
+      address: "VIP, Service Road East, Ghauri Town, 44000, Islamabad",
     },
   ];
 
@@ -117,7 +116,7 @@ const Footer = () => {
     },
   ];
 
-  const sharedTextClass = `lg:text-[17px] text-[hsla(0,0%,100%,.7)] ${PoppinsFont}`;
+  const sharedTextClass = `lg:text-[17px] text-[hsla(0,0%,100%,.7)] pb-[10px] ${PoppinsFont}`;
   const sharedLinkClass = `px-2 text-[hsla(0,0%,100%,.7)] ${PoppinsFont}`;
   const borderRightClass = "border-r-2 border-gray-600";
 
@@ -152,10 +151,10 @@ const Footer = () => {
         }}
       />
 
-      <div className="bg-[#131213] rounded-xl p-10 relative">
+      <div className="bg-black rounded-xl p-10 relative">
         <div className="flex lg:flex-row flex-col justify-evenly lg:gap-20 gap-6 w-full pb-5">
           <div className="lg:w-[23%] w-full text-center">
-            <div className="flex items-center justify-center lg:pb-8 pb-4">
+            <div className="flex items-center justify-center lg:pb-4">
               <Link href="/">
                 <Image
                   className="w-auto h-[45px] lg:h-[55px]"
@@ -178,10 +177,11 @@ const Footer = () => {
                 <a
                   key={index}
                   href={item.href}
-                  className={`${sharedTextClass} ${item.extraClass} hover:text-yellow-600 transition-all`}
+                  className={`${sharedTextClass} ${item.extraClass} hover:text-orange-400 transition-all flex justify-center items-center gap-1`}
                   style={{ paddingBottom: 0 }}
                   target="_blank"
                 >
+                  <FaEnvelope />
                   {item.content}
                 </a>
               )
@@ -228,7 +228,7 @@ const Footer = () => {
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="lg:text-[17px] text-1xl hover:text-yellow-600 transition-all text-[hsla(0,0%,100%,.7)] tracking-[0.9px]"
+                    className="lg:text-[17px] text-1xl hover:text-orange-400  transition-all text-[hsla(0,0%,100%,.7)] tracking-[0.9px]"
                   >
                     {link.name}
                   </a>

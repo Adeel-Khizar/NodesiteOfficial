@@ -1,11 +1,11 @@
-import { useCursor } from '../hooks/CursorContext'; // Adjust the path as necessary
-import { porfolioCards } from '@/constants';
-import React, { useEffect, useRef, useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { motion } from 'framer-motion';
-import 'swiper/css';
-import { Rancher, SedaN } from '@/fonts';
-import { Mousewheel } from 'swiper/modules';
+import { useCursor } from "../hooks/CursorContext"; // Adjust the path as necessary
+import { porfolioCards } from "@/constants";
+import React, { useEffect, useRef, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { motion } from "framer-motion";
+import "swiper/css";
+import { Rancher, SedaN } from "@/fonts";
+import { Mousewheel } from "swiper/modules";
 
 const Portfolio: React.FC = () => {
   const { cursorText, setCursorText } = useCursor();
@@ -20,8 +20,8 @@ const Portfolio: React.FC = () => {
     };
 
     handleResize(); // Check initial size
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   useEffect(() => {
@@ -29,9 +29,9 @@ const Portfolio: React.FC = () => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
 
-    window.addEventListener('mousemove', mouseMove);
+    window.addEventListener("mousemove", mouseMove);
     return () => {
-      window.removeEventListener('mousemove', mouseMove);
+      window.removeEventListener("mousemove", mouseMove);
     };
   }, []);
 
@@ -45,7 +45,7 @@ const Portfolio: React.FC = () => {
       width: 150,
       x: mousePosition.x - 75,
       y: mousePosition.y - 75,
-      backgroundColor: 'white',
+      backgroundColor: "white",
     },
   };
 
@@ -57,26 +57,35 @@ const Portfolio: React.FC = () => {
   };
 
   return (
-    <div style={{ scrollMarginTop: '80px' }} id="portfolio" className="h-auto lg:px-10 px-4 lg:pt-10 pt-6 z-[111] relative bg-black text-white">
-      <h2 className={`${Rancher} lg:text-[5vw] text-3xl lg:pb-10 font-bold`}>
+    <div
+      style={{ scrollMarginTop: "80px" }}
+      id="portfolio"
+      className="h-auto lg:px-10 px-4 lg:pt-10 pt-6 z-[111] relative bg-black text-white"
+    >
+      <h2
+        className={`${Rancher} lg:text-[5vw] text-3xl lg:pb-10 font-bold text-center`}
+      >
         Portfolio <span className="text-white">highlights</span>
       </h2>
-      <p className={`md:text-2xl text-gray-300 pt-4 ${SedaN}`}>
-        Over 200 successful websites launched. From landing pages to corporate projects, we make you shine online
+      <p className={`md:text-2xl text-gray-300 pt-4 ${SedaN} text-center`}>
+        Over 200 successful websites launched. From landing pages to corporate
+        projects, we make you shine online
       </p>
       <div className="w-full md:pt-8 pt-4 h-auto relative">
         <motion.div
           className="cursor flex items-center justify-center"
           variants={variants}
-          animate={cursorText ? 'hover' : 'default'}
+          animate={cursorText ? "hover" : "default"}
         >
           {cursorText && (
-            <span className={`text-black text-xl font-bold ${Rancher}`}>{cursorText}</span>
+            <span className={`text-black text-xl font-bold ${Rancher}`}>
+              {cursorText}
+            </span>
           )}
         </motion.div>
 
         <Swiper
-          direction={'horizontal'}
+          direction={"horizontal"}
           mousewheel={true}
           ref={swiperRef}
           spaceBetween={isMobile ? 10 : 25}
@@ -95,24 +104,28 @@ const Portfolio: React.FC = () => {
             <SwiperSlide
               key={index}
               className={`flex cursor-pointer rounded-2xl overflow-hidden items-start justify-center transition-all duration-500 ease-in-out
-                ${index === activeIndex ? 'opacity-100 scale-100' : 'opacity-60 scale-95'}
+                ${
+                  index === activeIndex
+                    ? "opacity-100 scale-100"
+                    : "opacity-60 scale-95"
+                }
               `}
               onClick={() => handleSlideClick(index)}
               onMouseEnter={() => {
                 if (index === (activeIndex + 1) % porfolioCards.length) {
-                  setCursorText('NEXT');
+                  setCursorText("NEXT");
                 }
               }}
-              onMouseLeave={() => setCursorText('')}
+              onMouseLeave={() => setCursorText("")}
               style={{
-                transition: 'all 0.8s ease', // Smooth transitions for scale and opacity
+                transition: "all 0.8s ease", // Smooth transitions for scale and opacity
               }}
             >
               <div>
                 <video
                   style={{
-                    pointerEvents: 'none',
-                    transition: 'transform 0.5s ease', // Smooth video transition
+                    pointerEvents: "none",
+                    transition: "transform 0.5s ease", // Smooth video transition
                   }}
                   playsInline
                   controls
@@ -125,8 +138,16 @@ const Portfolio: React.FC = () => {
               </div>
               <div className="flex bg-[#1f1d1c] justify-between">
                 <div className="p-3">
-                  <h3 className={`text-white text-start text-2xl md:text-3xl ${Rancher}`}>{item.projectTitle}</h3>
-                  <h5 className={`text-gray-300 text-start text-sm md:text-2xl md:pt-2 ${SedaN}`}>{item.projectSubtitle}</h5>
+                  <h3
+                    className={`text-white text-start text-2xl md:text-3xl ${Rancher}`}
+                  >
+                    {item.projectTitle}
+                  </h3>
+                  <h5
+                    className={`text-gray-300 text-start text-sm md:text-2xl md:pt-2 ${SedaN}`}
+                  >
+                    {item.projectSubtitle}
+                  </h5>
                 </div>
               </div>
             </SwiperSlide>

@@ -14,6 +14,7 @@ import { CursorProvider } from "@/hooks/CursorContext";
 import { useScroll, useTransform } from "framer-motion";
 import { motion } from "framer-motion";
 import { useRef, useEffect } from "react";
+import Awards from "@/components/Awards";
 
 const Home = () => {
   const ref = useRef<HTMLDivElement | null>(null);
@@ -50,6 +51,7 @@ const Home = () => {
         {/* Ensure enough height to scroll */}
         <ProjectCount />
       </div>
+      <Awards />
       <CursorProvider>
         <Portfolio />
         <Services />

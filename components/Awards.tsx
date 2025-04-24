@@ -1,0 +1,81 @@
+import React from "react";
+import { OswaldFont } from "@/fonts";
+
+interface AwardBadgeProps {
+  href: string;
+  imageSrc: string;
+  altText: string;
+  className?: string;
+  [key: string]: any;
+}
+
+const AwardBadge: React.FC<AwardBadgeProps> = ({
+  href,
+  imageSrc,
+  altText,
+  className = "",
+  ...props
+}) => (
+  <a href={href} target="_blank" rel="noopener noreferrer" className="block">
+    <img
+      src={imageSrc}
+      alt={altText}
+      className={`transition-transform duration-300 ease-in-out hover:-translate-y-2 ${className}`}
+      {...props}
+    />
+  </a>
+);
+
+const AwardsSection = () => {
+  const awardsData = {
+    title: "Awards and Recognition",
+    mainAward: {
+      src: "/badgePlatinum.png",
+      alt: "Platinum Badge",
+      className: "w-32 md:w-72 mb-10",
+    },
+    secondaryAwards: [
+      {
+        src: "/Rush.png",
+        alt: "Rush Badge",
+        className: "w-48 md:w-52",
+      },
+      {
+        src: "/Trustpilot.png",
+        alt: "Trustpilot Badge",
+        className: "w-48 md:w-52",
+      },
+    ],
+  };
+
+  return (
+    <section className="bg-black lg:pb-36 pb-24 w-full px-4 py-20 flex flex-col items-center relative z-30">
+      <h2
+        className={`${OswaldFont} text-2xl md:text-[58px] text-[20px] uppercase lg:pb-20 pb-4 font-bold text-center mb-6 text-white`}
+      >
+        {awardsData.title}
+      </h2>
+
+      <AwardBadge
+        href="#"
+        imageSrc={awardsData.mainAward.src}
+        altText={awardsData.mainAward.alt}
+        className={awardsData.mainAward.className}
+      />
+
+      <div className="flex flex-col md:flex-row gap-8 items-center justify-between max-w-[700px] w-full">
+        {awardsData.secondaryAwards.map((award, index) => (
+          <AwardBadge
+            key={index}
+            href="#"
+            imageSrc={award.src}
+            altText={award.alt}
+            className={award.className}
+          />
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default AwardsSection;

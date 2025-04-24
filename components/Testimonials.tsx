@@ -26,7 +26,7 @@ const Testimonials = () => {
       id="testimonials"
       className="pb-0 md:pb-10 py-[40px] lg:py-[50px] bg-black lg:px-0 px-4 z-[111] relative"
     >
-      <div className="m-auto max-w-[900px]">
+      <div className="m-auto max-w-[900px] mb-[200px]">
         <h2
           style={{ lineHeight: "100%" }}
           className={` ${Rancher} text-center text-white mb-10 lg:mb-20 text-3xl lg:text-[4.5vw]`}

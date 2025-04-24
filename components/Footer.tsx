@@ -12,7 +12,7 @@ import {
   faFacebookF,
 } from "@fortawesome/free-brands-svg-icons";
 import { FaStar, FaEnvelope } from "react-icons/fa";
-import { OswaldFont, PoppinsFont, OutfitFont } from "@/fonts";
+import { OswaldFont, PoppinsFont } from "@/fonts";
 
 declare global {
   interface Window {
@@ -45,7 +45,7 @@ const Stars = () => (
 const Footer = () => {
   const navLinks = [
     { name: "Services", href: "#services" },
-    { name: "Works", href: "https://nodeagency.co/works" },
+    { name: "Works", href: "https://nodeagency.co/work" },
     { name: "Testimonials", href: "#testimonials" },
   ];
 
@@ -228,6 +228,8 @@ const Footer = () => {
                 <li key={index}>
                   <a
                     href={link.href}
+                    target={link.href.startsWith("http") ? "_blank" : "_self"}
+                    rel="noopener noreferrer"
                     className="lg:text-[17px] text-1xl hover:text-[#F97316]  transition-all text-[hsla(0,0%,100%,.7)] tracking-[0.9px]"
                   >
                     {link.name}

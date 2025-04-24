@@ -20,7 +20,7 @@ const AwardBadge: React.FC<AwardBadgeProps> = ({
     <img
       src={imageSrc}
       alt={altText}
-      className={`transition-transform duration-300 ease-in-out hover:-translate-y-2 ${className}`}
+      className={`transition-transform hover:opacity-65 duration-300 ease-in-out hover:-translate-y-2 ${className}`}
       {...props}
     />
   </a>
@@ -30,20 +30,23 @@ const AwardsSection = () => {
   const awardsData = {
     title: "Awards and Recognition",
     mainAward: {
-      src: "/badgePlatinum.png",
+      src: "/updatedPlatinum.png",
       alt: "Platinum Badge",
       className: "w-32 md:w-72 mb-10",
+      href: "#",
     },
     secondaryAwards: [
       {
         src: "/Rush.png",
         alt: "Rush Badge",
         className: "w-48 md:w-52",
+        href: "#",
       },
       {
         src: "/Trustpilot.png",
         alt: "Trustpilot Badge",
         className: "w-48 md:w-52",
+        href: "https://www.trustpilot.com/review/nodeagency.co",
       },
     ],
   };
@@ -57,7 +60,7 @@ const AwardsSection = () => {
       </h2>
 
       <AwardBadge
-        href="#"
+        href={awardsData.mainAward.href}
         imageSrc={awardsData.mainAward.src}
         altText={awardsData.mainAward.alt}
         className={awardsData.mainAward.className}
@@ -67,7 +70,7 @@ const AwardsSection = () => {
         {awardsData.secondaryAwards.map((award, index) => (
           <AwardBadge
             key={index}
-            href="#"
+            href={award.href}
             imageSrc={award.src}
             altText={award.alt}
             className={award.className}

@@ -260,9 +260,9 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="w-full flex md:flex-row flex-col md:gap-0 gap-4 lg:mt-14 mt-7 items-center justify-center text-center md:justify-between border-t-[0.5px] border-gray-300 pt-6">
+        <div className="w-full flex md:flex-row flex-col md:gap-0 gap-4 lg:mt-0 mt-7 items-center justify-center text-center md:justify-between border-t-[0.5px] border-gray-300 pt-6">
           <p className={`text-sm text-[hsla(0,0%,100%,.7)] ${PoppinsFont}`}>
-            Node Agency 2020 - 2025. All Rights Reserved
+            Node Agency &copy; 2025. All Rights Reserved
           </p>
           <div className="hidden items-center">
             {footerLinks.map((link, index) => (

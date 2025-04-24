@@ -20,7 +20,7 @@ const AwardBadge: React.FC<AwardBadgeProps> = ({
     <img
       src={imageSrc}
       alt={altText}
-      className={`transition-transform hover:opacity-65 duration-300 ease-in-out hover:-translate-y-2 ${className}`}
+      className={`transition-all hover:opacity-65 duration-300 ease-in-out hover:-translate-y-2 ${className}`}
       {...props}
     />
   </a>

@@ -45,7 +45,7 @@ const Stars = () => (
 const Footer = () => {
   const navLinks = [
     { name: "Services", href: "#services" },
-    { name: "Works", href: "#works" },
+    { name: "Works", href: "https://nodeagency.co/works" },
     { name: "Testimonials", href: "#testimonials" },
   ];
 
@@ -177,7 +177,7 @@ const Footer = () => {
                 <a
                   key={index}
                   href={item.href}
-                  className={`${sharedTextClass} ${item.extraClass} hover:text-orange-400 transition-all flex justify-center items-center gap-1`}
+                  className={`${sharedTextClass} ${item.extraClass} hover:text-[#F97316] transition-all flex justify-center items-center gap-1`}
                   style={{ paddingBottom: 0 }}
                   target="_blank"
                 >
@@ -228,7 +228,7 @@ const Footer = () => {
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="lg:text-[17px] text-1xl hover:text-orange-400  transition-all text-[hsla(0,0%,100%,.7)] tracking-[0.9px]"
+                    className="lg:text-[17px] text-1xl hover:text-[#F97316]  transition-all text-[hsla(0,0%,100%,.7)] tracking-[0.9px]"
                   >
                     {link.name}
                   </a>

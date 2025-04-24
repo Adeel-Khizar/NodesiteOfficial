@@ -36,7 +36,7 @@ const Services: React.FC = () => {
         >
           Your Vision,
           <br />
-          <span className="text-orange-500 font-bold">Our Expertise</span>
+          <span className="text-[#F97316] font-bold">Our Expertise</span>
         </h2>
         <p className={`text-gray-200 text-lg sm:text-2xl mt-8 ${SedaN}`}>
           Got a big idea? Let’s bring it to life. Our team of skilled
@@ -67,7 +67,7 @@ const Services: React.FC = () => {
         {/* Swiper Component */}
         <Swiper
           direction={isMobile ? "horizontal" : "vertical"}
-          slidesPerView={isMobile ? 1.4 : 1.4}
+          slidesPerView={isMobile ? 1.1 : 1.4}
           spaceBetween={20}
           mousewheel={true}
           pagination={{ clickable: false }}
@@ -100,7 +100,7 @@ const Services: React.FC = () => {
                 {/* Text Section */}
                 <div className="flex flex-col text-white text-start mt-12">
                   <h3
-                    className={`text-2xl text-orange-500 lg:text-3xl font-bold ${Rancher}`}
+                    className={`text-2xl text-[#F97316] lg:text-3xl font-bold ${Rancher}`}
                     style={{
                       transition: "opacity 0.3s ease-in-out",
                       lineHeight: "120%",

@@ -13,41 +13,64 @@ const FAQS: React.FC = () => {
   const [activeId, setActiveId] = useState<number | null>(null);
   const [hoveredId, setHoveredId] = useState<number | null>(null);
   const buttonRefs = useRef<(HTMLButtonElement | null)[]>([]);
+  const contentRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const toggleAccordion = (id: number) => {
     setActiveId(activeId === id ? null : id);
   };
 
   useEffect(() => {
+    // Initialize ref arrays if they're null
+    if (!buttonRefs.current) {
+      buttonRefs.current = [];
+    }
+    if (!contentRefs.current) {
+      contentRefs.current = [];
+    }
+
     const buttons = buttonRefs.current;
+    const contents = contentRefs.current;
 
-    const handleMouseMove = (e: MouseEvent, index: number) => {
-      const button = buttons[index];
-      if (!button) return;
+    const handleMouseMove = (e: MouseEvent, element: HTMLElement | null) => {
+      if (!element) return;
 
-      const rect = button.getBoundingClientRect();
+      const rect = element.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
-      button.style.setProperty("--mouse-x", `${x}px`);
-      button.style.setProperty("--mouse-y", `${y}px`);
+      element.style.setProperty("--mouse-x", `${x}px`);
+      element.style.setProperty("--mouse-y", `${y}px`);
     };
 
-    const mouseMoveListeners = faqs.map((_, index) => {
-      return (e: MouseEvent) => handleMouseMove(e, index);
-    });
+    const setupListeners = (
+      elements: (HTMLElement | null)[],
+      refArray: React.RefObject<(HTMLElement | null)[]>
+    ) => {
+      const listeners = elements.map((_, index) => {
+        return (e: MouseEvent) =>
+          handleMouseMove(e, refArray.current?.[index] ?? null);
+      });
 
-    buttons.forEach((button, index) => {
-      if (button) {
-        button.addEventListener("mousemove", mouseMoveListeners[index]);
-      }
-    });
-
-    return () => {
-      buttons.forEach((button, index) => {
-        if (button) {
-          button.removeEventListener("mousemove", mouseMoveListeners[index]);
+      elements.forEach((element, index) => {
+        if (element) {
+          element.addEventListener("mousemove", listeners[index]);
         }
       });
+
+      return () => {
+        elements.forEach((element, index) => {
+          if (element) {
+            element.removeEventListener("mousemove", listeners[index]);
+          }
+        });
+      };
+    };
+
+    const cleanUpButtons = setupListeners(buttons, buttonRefs);
+    const cleanUpContents = setupListeners(contents, contentRefs);
+
+    return () => {
+      cleanUpButtons();
+      cleanUpContents();
     };
   }, []);
 
@@ -68,17 +91,30 @@ const FAQS: React.FC = () => {
           bottom: 0;
           background: radial-gradient(
             600px circle at var(--mouse-x) var(--mouse-y),
-            rgba(255, 255, 255, 0.1),
-            transparent 40%
+            rgba(167, 139, 250, 0.15),
+            transparent 60%
           );
           opacity: 0;
-          transition: opacity 0.3s ease;
+          transition: opacity 0.4s ease;
           pointer-events: none;
-          border-radius: 0.75rem 0.75rem 0 0;
+          z-index: 0;
         }
 
         .glow-effect:hover::before {
           opacity: 1;
+        }
+
+        .button-glow::before {
+          border-radius: 0.75rem 0.75rem 0 0;
+        }
+
+        .content-glow::before {
+          border-radius: 0 0 0.75rem 0.75rem;
+        }
+
+        .glow-content {
+          position: relative;
+          z-index: 1;
         }
       `}</style>
 
@@ -119,21 +155,25 @@ const FAQS: React.FC = () => {
                 onHoverEnd={() => setHoveredId(null)}
               >
                 <button
-                  ref={(el) => (buttonRefs.current[index] = el)}
+                  ref={(el: HTMLButtonElement | null) => {
+                    if (buttonRefs.current) {
+                      buttonRefs.current[index] = el;
+                    }
+                  }}
                   onClick={() => toggleAccordion(faq.id)}
-                  className={`glow-effect w-full flex justify-between rounded-t-xl items-center py-5 px-4 text-left focus:outline-none transition-colors duration-200 ${
+                  className={`custom-dot-cursor glow-effect button-glow w-full flex justify-between rounded-t-xl items-center py-5 px-4 text-left focus:outline-none transition-colors duration-200 ${
                     activeId === faq.id ? "bg-gray-900" : "hover:bg-gray-900/50"
                   }`}
                 >
                   <h3
-                    className={`${PoppinsFont} text-xl sm:text-2xl text-white`}
+                    className={`${PoppinsFont} text-xl sm:text-2xl text-white relative z-10`}
                   >
                     {faq.header}
                   </h3>
                   <motion.div
                     animate={{ rotate: activeId === faq.id ? 45 : 0 }}
                     transition={{ duration: 0.3 }}
-                    className="ml-4 flex-shrink-0"
+                    className="ml-4 flex-shrink-0 relative z-10"
                   >
                     <svg
                       className="w-8 h-8 text-white"
@@ -174,10 +214,19 @@ const FAQS: React.FC = () => {
                       }}
                       className="overflow-hidden"
                     >
-                      <div className="px-4 pb-6 pt-6 rounded-b-xl bg-gray-900/80 border-t border-gray-800 mb-[10px]">
-                        <p className={`${PoppinsFont} text-gray-300 text-lg`}>
-                          {faq.text}
-                        </p>
+                      <div
+                        ref={(el: HTMLDivElement | null) => {
+                          if (contentRefs.current) {
+                            contentRefs.current[index] = el;
+                          }
+                        }}
+                        className="glow-effect content-glow px-4 pb-6 pt-6 rounded-b-xl bg-gray-900/80 border-t border-gray-800 mb-[10px]"
+                      >
+                        <div className="glow-content">
+                          <p className={`${PoppinsFont} text-gray-300 text-lg`}>
+                            {faq.text}
+                          </p>
+                        </div>
                       </div>
                     </motion.div>
                   )}

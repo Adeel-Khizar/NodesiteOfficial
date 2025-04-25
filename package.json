@@ -12,6 +12,7 @@
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@next/font": "^14.2.15",
+    "@react-spring/web": "^9.7.5",
     "@react-three/drei": "^9.114.3",
     "@react-three/fiber": "^8.17.10",
     "clsx": "^2.1.1",

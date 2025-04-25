@@ -142,7 +142,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <div className="px-[5vw] pt-[60px] bg-[#fff] pb-12 relative z-50">
+    <div className="px-[5vw] pt-[60px] bg-[#1C1C1C] pb-12 relative z-50">
       <Script
         src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
         strategy="lazyOnload"

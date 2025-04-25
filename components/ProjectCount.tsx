@@ -4,7 +4,7 @@ import React from "react";
 const ProjectCount = () => {
   const fastText = "(*fast)";
   return (
-    <div className="flex relative  rounded-t-md rounded-r-md  rounded-b-none bg-black lg:px-10 px-4 py-10 flex-col lg:h-[100vh] h-auto w-full justify-center items-start gap-6 lg:gap-12  ">
+    <div className="flex relative  rounded-t-md rounded-r-md  rounded-b-none bg-black lg:px-10 px-4 py-10 flex-col lg:h-auto lg:pb-24 w-full justify-center items-start gap-6 lg:gap-12  ">
       <div className="flex lg:max-w-[70%] bg-black flex-col   justify-center items-start gap-12  ">
         <h3 className={` text-lg md:text-2xl text-white ${SedaN} `}>
           Over 200+ Projects Closed

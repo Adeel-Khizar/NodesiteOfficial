@@ -37,8 +37,8 @@ const AwardsSection = () => {
     },
     secondaryAwards: [
       {
-        src: "/Rush.png",
-        alt: "Rush Badge",
+        src: "/clutch-shield.png",
+        alt: "Clutch Shield Badge",
         className: "w-48 md:w-52",
         href: "#",
       },

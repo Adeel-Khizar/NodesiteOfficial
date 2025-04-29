@@ -28,8 +28,7 @@
     "styled-components": "^6.1.17",
     "swiper": "^11.1.14",
     "tailwind-merge": "^2.5.3",
-    "three": "^0.169.0",
-    "three-globe": "^2.32.0"
+    "three": "^0.169.0"
   },
   "devDependencies": {
     "@types/node": "^20",

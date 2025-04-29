@@ -2,17 +2,8 @@
 
 import { SedaN, ManropeFont, PoppinsFont } from "@/fonts";
 import Link from "next/link";
-import React, { useEffect, useState, Suspense } from "react";
-import dynamic from "next/dynamic";
-
-// Dynamically import the GlobeDemo component and specify it as a React component
-const GlobeDemo = dynamic(
-  () => import("./Globe").then((mod) => mod.GlobeDemo),
-  {
-    ssr: false, // Disable SSR for GlobeDemo to only load it on the client side
-    loading: () => <div>Loading globe...</div>, // Loading fallback while the component is loading
-  }
-);
+import React, { Suspense } from "react";
+import Globe from "./Globe";
 
 const Hero: React.FC = () => {
   // State to handle lazy loading of video
@@ -38,7 +29,7 @@ const Hero: React.FC = () => {
         />
       </video>
 
-      <div className="flex flex-col mt-[90px] md:mt-[160px] font-light gap-6 lg:gap-10 pt-[10vw] pl-[6vw] lg:pl-[5vw] lg:pt-[5vw] w-full lg:max-w-[60%]">
+      <div className="flex flex-col mt-[90px] md:mt-[160px] font-light gap-6 lg:gap-10 pt-[10vw] pl-[6vw] lg:pl-[5vw] lg:pt-[5vw] w-full lg:max-w-[58%]">
         <div style={{ position: "relative", overflow: "hidden" }}>
           <h1
             style={{
@@ -83,10 +74,7 @@ const Hero: React.FC = () => {
       </div>
 
       <div className="w-full lg:py-0 pb-10 md:pb-0 z-10 top-[14%] lg:absolute lg:right-0 lg:max-w-[40vw]">
-        {/* Lazy-load the GlobeDemo */}
-        <Suspense fallback={<div>Loading globe...</div>}>
-          <GlobeDemo />
-        </Suspense>
+        <Globe />
       </div>
     </div>
   );

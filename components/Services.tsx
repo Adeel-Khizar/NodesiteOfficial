@@ -6,7 +6,7 @@ import Link from "next/link";
 import { clientTestimonials } from "@/constants";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Rancher, SedaN } from "@/fonts";
+import { ManropeFont, PoppinsFont } from "@/fonts";
 
 const Services: React.FC = () => {
   const { cursorText, setCursorText } = useCursor();
@@ -31,14 +31,14 @@ const Services: React.FC = () => {
       {/* Left Column (Text) */}
       <div className="w-[100%] pt-[3%] lg:pt-0 lg:w-[60%] text-white pl-6 lg:pl-10 pr-4">
         <h2
-          className={` ${Rancher} text text-4xl lg:text-[4.5vw]`}
+          className={` ${ManropeFont} text text-4xl lg:text-[4.5vw]`}
           style={{ lineHeight: "100%" }}
         >
           Your Vision,
           <br />
           <span className="text-[#F97316] font-bold">Our Expertise</span>
         </h2>
-        <p className={`text-gray-200 text-lg sm:text-2xl mt-8 ${SedaN}`}>
+        <p className={`text-gray-200 text-lg sm:text-2xl mt-8 ${PoppinsFont}`}>
           Got a big idea? Let’s bring it to life. Our team of skilled
           professionals is ready to turn your vision into reality. With a focus
           on cutting-edge technology and personalized service, we deliver
@@ -100,7 +100,7 @@ const Services: React.FC = () => {
                 {/* Text Section */}
                 <div className="flex flex-col text-white text-start mt-12">
                   <h3
-                    className={`text-2xl text-[#F97316] lg:text-3xl font-bold ${Rancher}`}
+                    className={`text-2xl text-[#F97316] lg:text-3xl font-bold ${ManropeFont}`}
                     style={{
                       transition: "opacity 0.3s ease-in-out",
                       lineHeight: "120%",
@@ -109,7 +109,7 @@ const Services: React.FC = () => {
                     {item.title}
                   </h3>
                   <h5
-                    className={`text-sm lg:text-lg ${SedaN}`}
+                    className={`text-sm lg:text-lg ${PoppinsFont}`}
                     style={{ transition: "opacity 0.3s ease-in-out" }}
                   >
                     {item.subtitle}

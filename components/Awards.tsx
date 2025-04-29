@@ -1,5 +1,5 @@
 import React from "react";
-import { OswaldFont } from "@/fonts";
+import { ManropeFont } from "@/fonts";
 
 interface AwardBadgeProps {
   href: string;
@@ -54,7 +54,7 @@ const AwardsSection = () => {
   return (
     <section className="bg-black lg:pb-36 pb-24 w-full px-4 py-20 flex flex-col items-center relative z-30">
       <h2
-        className={`${OswaldFont} text-2xl md:text-[58px] text-[20px] uppercase lg:pb-20 pb-4 font-bold text-center mb-6 text-white`}
+        className={`${ManropeFont} text-2xl md:text-[58px] text-[20px] uppercase lg:pb-20 pb-4 font-bold text-center mb-6 text-white`}
       >
         {awardsData.title}
       </h2>

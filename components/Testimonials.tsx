@@ -15,7 +15,7 @@ import {
 } from "swiper/modules";
 import { clientReviews } from "@/constants";
 import Image from "next/image";
-import { Rancher, SedaN } from "@/fonts";
+import { ManropeFont, PoppinsFont } from "@/fonts";
 
 const Testimonials = () => {
   return (
@@ -29,7 +29,7 @@ const Testimonials = () => {
       <div className="m-auto max-w-[900px] mb-[200px]">
         <h2
           style={{ lineHeight: "100%" }}
-          className={` ${Rancher} text-center text-white mb-10 lg:mb-20 text-3xl lg:text-[4.5vw]`}
+          className={` ${ManropeFont} text-center text-white mb-10 lg:mb-20 text-3xl lg:text-[4.5vw]`}
         >
           Testimonials
         </h2>
@@ -74,7 +74,7 @@ const Testimonials = () => {
           >
             <div className="flex gap-20 flex-col">
               <h2
-                className={` ${SedaN} text-white text-md text-center lg:text-xl tracking-wide`}
+                className={` ${PoppinsFont} text-white text-md text-center lg:text-xl tracking-wide`}
               >
                 "{reviews.Review}"
               </h2>
@@ -85,11 +85,13 @@ const Testimonials = () => {
                       fontWeight: "900",
                       letterSpacing: "0.1rem",
                     }}
-                    className={` ${SedaN} text-center text-2xl`}
+                    className={` ${PoppinsFont} text-center text-2xl`}
                   >
                     {reviews.profileName}
                   </h2>
-                  <h2 className={` ${SedaN} text-center text-md text-gray-400`}>
+                  <h2
+                    className={` ${PoppinsFont} text-center text-md text-gray-400`}
+                  >
                     {reviews.profileProfession}
                   </h2>
                 </div>

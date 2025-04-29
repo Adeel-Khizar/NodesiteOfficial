@@ -1,5 +1,5 @@
 import { faqs } from "@/constants";
-import { Rancher, SedaN, OswaldFont, PoppinsFont } from "@/fonts";
+import { PoppinsFont, OswaldFont, ManropeFont } from "@/fonts";
 import React, { useRef, useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -124,7 +124,7 @@ const FAQS: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className={`${OswaldFont} text-4xl sm:text-5xl lg:text-6xl text-white mb-4`}
+            className={`${ManropeFont} text-4xl sm:text-5xl lg:text-6xl text-white mb-4`}
           >
             Frequently Asked Questions
           </motion.h2>

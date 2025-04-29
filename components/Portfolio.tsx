@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { motion } from "framer-motion";
 import "swiper/css";
-import { Rancher, SedaN } from "@/fonts";
+import { ManropeFont, PoppinsFont } from "@/fonts";
 import { Mousewheel } from "swiper/modules";
 
 const Portfolio: React.FC = () => {
@@ -63,11 +63,13 @@ const Portfolio: React.FC = () => {
       className="h-auto lg:px-10 px-4 lg:pt-10 pt-6 z-[111] relative bg-black text-white"
     >
       <h2
-        className={`${Rancher} lg:text-[5vw] text-3xl lg:pb-10 font-bold text-center`}
+        className={`${ManropeFont} lg:text-[5vw] text-3xl lg:pb-10 font-bold text-center`}
       >
         Portfolio <span className="text-white">highlights</span>
       </h2>
-      <p className={`md:text-2xl text-gray-300 pt-4 ${SedaN} text-center`}>
+      <p
+        className={`md:text-2xl text-gray-300 pt-4 ${PoppinsFont} text-center`}
+      >
         Over 200 successful websites launched. From landing pages to corporate
         projects, we make you shine online
       </p>
@@ -78,7 +80,7 @@ const Portfolio: React.FC = () => {
           animate={cursorText ? "hover" : "default"}
         >
           {cursorText && (
-            <span className={`text-black text-xl font-bold ${Rancher}`}>
+            <span className={`text-black text-xl font-bold ${ManropeFont}`}>
               {cursorText}
             </span>
           )}
@@ -139,12 +141,12 @@ const Portfolio: React.FC = () => {
               <div className="flex bg-[#1f1d1c] justify-between">
                 <div className="p-3">
                   <h3
-                    className={`text-white text-start text-2xl md:text-3xl ${Rancher}`}
+                    className={`text-white text-start text-2xl md:text-3xl ${ManropeFont}`}
                   >
                     {item.projectTitle}
                   </h3>
                   <h5
-                    className={`text-gray-300 text-start text-sm md:text-2xl md:pt-2 ${SedaN}`}
+                    className={`text-gray-300 text-start text-sm md:text-2xl md:pt-2 ${PoppinsFont}`}
                   >
                     {item.projectSubtitle}
                   </h5>

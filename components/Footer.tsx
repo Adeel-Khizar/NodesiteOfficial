@@ -12,7 +12,7 @@ import {
   faFacebookF,
 } from "@fortawesome/free-brands-svg-icons";
 import { FaStar, FaEnvelope } from "react-icons/fa";
-import { OswaldFont, PoppinsFont } from "@/fonts";
+import { ManropeFont, OswaldFont, PoppinsFont } from "@/fonts";
 
 declare global {
   interface Window {
@@ -196,7 +196,7 @@ const Footer = () => {
 
           <div className="lg:w-[27%] w-full p-4 lg:p-0">
             <h4
-              className={`text-[20px] lg:text-2xl font-bold mb-6 text-center lg:mb-8 ${OswaldFont}`}
+              className={`text-[20px] lg:text-2xl font-bold mb-6 text-center lg:mb-8 ${ManropeFont}`}
             >
               LOCATIONS
             </h4>
@@ -219,7 +219,7 @@ const Footer = () => {
 
           <div className="lg:w-[20%] w-full flex flex-col">
             <h4
-              className={`text-[20px] lg:text-2xl font-bold mb-6 text-center ${OswaldFont} uppercase`}
+              className={`text-[20px] lg:text-2xl font-bold mb-6 text-center ${ManropeFont} uppercase`}
             >
               Site Links
             </h4>

@@ -40,7 +40,7 @@ const AwardsSection = () => {
         src: "/clutch-shield.png",
         alt: "Clutch Shield Badge",
         className: "w-48 md:w-52",
-        href: "#",
+        href: "https://clutch.co/profile/node-agency",
       },
       {
         src: "/Trustpilot.png",

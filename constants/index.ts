@@ -237,6 +237,14 @@ export const clientReviews = [
     profileName: "Katlien",
     profileProfession: "CM2 Media",
   },
+  {
+    id: 6,
+    Review:
+      "Working with NODE for advanced WordPress customization was an excellent experience. They delivered clean, scalable code with modern tech like React and custom APIs. The website now provides a dynamic user experience and is quicker and more secure. Highly suggested for innovative WordPress work!",
+    profileImage: "/cm2-logo-light.svg",
+    profileName: "Jason",
+    profileProfession: "Vert Digital",
+  },
 ];
 export const TeamInfo = [
   {

@@ -177,7 +177,7 @@ const Footer = () => {
                 <a
                   key={index}
                   href={item.href}
-                  className={`${sharedTextClass} ${item.extraClass} hover:text-[#F97316] transition-all flex justify-center items-center gap-1`}
+                  className={`${sharedTextClass} ${item.extraClass} hover:text-[#F97316] transition-all flex justify-center items-center gap-1 w-fit max-w-full m-auto`}
                   style={{ paddingBottom: 0 }}
                   target="_blank"
                 >

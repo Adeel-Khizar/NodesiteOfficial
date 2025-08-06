@@ -82,10 +82,10 @@ const Footer = () => {
       address:
         "7091 4TH ST STE 300 ST PETERSBERG, Florida, NY 33702, United States",
     },
-    {
-      region: "ASIA",
-      address: "VIP, Service Road East, Ghauri Town, 44000, Islamabad",
-    },
+    // {
+    //   region: "ASIA",
+    //   address: "VIP, Service Road East, Ghauri Town, 44000, Islamabad",
+    // },
   ];
 
   const infoItems = [

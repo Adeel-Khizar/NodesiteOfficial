@@ -11,7 +11,7 @@ import {
   faTwitter,
   faFacebookF,
 } from "@fortawesome/free-brands-svg-icons";
-import { FaStar, FaEnvelope } from "react-icons/fa";
+import { FaStar, FaPhone, FaEnvelope } from "react-icons/fa";
 import { ManropeFont, OswaldFont, PoppinsFont } from "@/fonts";
 
 declare global {
@@ -101,6 +101,12 @@ const Footer = () => {
       href: "mailto:hrjobs@nodeagency.co",
       extraClass: "pb-20",
     },
+    {
+      type: "link",
+      content: "727-362-3617",
+      href: "tel:727-362-3617",
+      extraClass: "pb-20",
+    },
   ];
 
   const footerLinks = [
@@ -177,11 +183,15 @@ const Footer = () => {
                 <a
                   key={index}
                   href={item.href}
-                  className={`${sharedTextClass} ${item.extraClass} hover:text-[#F97316] transition-all flex justify-center items-center gap-1 w-fit max-w-full m-auto`}
+                  className={`${sharedTextClass} ${item.extraClass} hover:text-[#F97316] transition-all flex justify-center items-center gap-1 w-fit max-w-full m-auto pt-2`}
                   style={{ paddingBottom: 0 }}
                   target="_blank"
                 >
-                  <FaEnvelope />
+                  {item.href?.startsWith("mailto:") && <FaEnvelope />}
+                  {item.href?.startsWith("tel:") && (
+                    <FaPhone className="ml-2" style={{ transform: "rotate(110deg)" }} />
+                  )}
+
                   {item.content}
                 </a>
               )

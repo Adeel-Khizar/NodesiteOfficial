@@ -195,6 +195,14 @@ export const clientTestimonials = [
     subtitle:
       "Great design goes beyond looks. Our UI/UX design services focus on creating intuitive interfaces that provide a seamless experience for your users.",
   },
+  {
+    id: 9,
+    icon: "/Logo.webp",
+    link:"https://cargodispatch.co",
+    title: "Your Trusted Dispatch Partner",
+    subtitle:
+      "Simplify your trucking operations with our reliable dispatch solutions. From scheduling to coordination, we handle the details so carriers can keep moving without delays. ",
+  },
 ];
 export const clientReviews = [
   {

@@ -83,24 +83,25 @@ const Services: React.FC = () => {
             >
               <div className="flex h-auto flex-col items-start justify-between">
                 {/* Image Section */}
-                <div className="md:w-[150px] md:h-[150px] w-[100px] h-[100px] min-h-[100px] min-w-[100px] md:min-h-[150px] md:min-w-[150px]">
+                <div className="md:w-[100px] md:h-[100px] w-[100px] h-[100px] min-h-[100px] min-w-[100px] md:min-h-[100px] md:min-w-[100px]">
                   <Image
                     style={{
                       objectFit: "contain",
                       transition: "transform 0.3s ease-in-out", // Smooth image transition on hover
                     }}
-                    className="min-h-[100px] md:w-[150px] md:h-[150px] w-[100px] h-[100px] min-w-[100px] md:min-h-[120px] md:min-w-[150px] object-contain"
+                    className="min-h-[100px] md:w-[100px] md:h-[100px] w-[100px] h-[100px] min-w-[100px] md:min-h-[100px] md:min-w-[100px] object-contain"
                     src={item.icon}
-                    height={250}
-                    width={250}
+                    height={200}
+                    width={200}
                     alt={item.title}
                   />
                 </div>
 
                 {/* Text Section */}
-                <div className="flex flex-col text-white text-start mt-12">
+                <div className="flex flex-col text-white text-start mt-8">
+                  <a href={item.link}>
                   <h3
-                    className={`text-2xl text-[#F97316] lg:text-3xl font-bold ${ManropeFont}`}
+                    className={`text-2xl text-[#F97316] lg:text-3xl font-bold ${ManropeFont} mb-4`}
                     style={{
                       transition: "opacity 0.3s ease-in-out",
                       lineHeight: "120%",
@@ -108,6 +109,7 @@ const Services: React.FC = () => {
                   >
                     {item.title}
                   </h3>
+                  </a>
                   <h5
                     className={`text-sm lg:text-lg ${PoppinsFont}`}
                     style={{ transition: "opacity 0.3s ease-in-out" }}

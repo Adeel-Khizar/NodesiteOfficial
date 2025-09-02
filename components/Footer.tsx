@@ -206,7 +206,7 @@ const Footer = () => {
 
           <div className="lg:w-[27%] w-full p-4 lg:p-0">
             <h4
-              className={`text-[20px] lg:text-2xl font-bold mb-6 text-center lg:mb-8 ${ManropeFont}`}
+              className={`text-[20px] lg:text-2xl font-bold mb-6 text-center lg:mb-8 ${ManropeFont} text-white`}
             >
               LOCATIONS
             </h4>
@@ -229,7 +229,7 @@ const Footer = () => {
 
           <div className="lg:w-[20%] w-full flex flex-col">
             <h4
-              className={`text-[20px] lg:text-2xl font-bold mb-6 text-center ${ManropeFont} uppercase`}
+              className={`text-[20px] lg:text-2xl font-bold mb-6 text-center ${ManropeFont} uppercase text-white`}
             >
               Site Links
             </h4>

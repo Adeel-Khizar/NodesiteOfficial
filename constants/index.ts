@@ -253,6 +253,22 @@ export const clientReviews = [
     profileName: "Jason",
     profileProfession: "Vert Digital",
   },
+  {
+    id: 7,
+    Review:
+      "Working with Node dispatch team has saved us time and money. Loads are always well-coordinated, and the support is top-notch. We’ve never had smoother trucking operations.",
+    profileImage: "/cm2-logo-light.svg",
+    profileName: "Sarah Parker",
+    profileProfession: "RapidMove Logistics",
+  },
+    {
+    id: 8,
+    Review:
+      "Reliable, professional, and always on point. Node well-organized dispatch solutions make sure every delivery runs efficiently, and that peace of mind is priceless for us as a growing trucking company.",
+    profileImage: "/cm2-logo-light.svg",
+    profileName: "Daniel Smith",
+    profileProfession: "Express Haul Cargo",
+  },
 ];
 export const TeamInfo = [
   {
